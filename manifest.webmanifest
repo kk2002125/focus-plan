@@ -1,0 +1,9 @@
+{
+  "name": "专注计划",
+  "short_name": "专注计划",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f6",
+  "theme_color": "#0f8f67",
+  "description": "学习专注计时、计划、统计与打卡"
+}
