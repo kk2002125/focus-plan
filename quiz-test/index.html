@@ -127,6 +127,9 @@ button{cursor:pointer}
 .check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
 .check-stat{text-align:center;background:var(--green-soft);border-radius:12px;padding:10px 5px}
 .check-stat b{display:block;font-size:20px;color:var(--green2)}
+.calendar-nav{display:flex;align-items:center;justify-content:space-between;margin:12px 0 4px}
+.calendar-nav button{border:0;background:#eef2ef;color:var(--text);border-radius:10px;padding:7px 12px;font-weight:800}
+.calendar-nav b{font-size:15px}
 .calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:12px}
 .cal-head{text-align:center;font-size:11px;color:var(--muted);padding:4px 0}
 .cal-day{border:0;min-height:38px;border-radius:10px;background:#eef2ef;color:var(--text);font-size:12px}
@@ -189,7 +192,7 @@ function nav(active){
 function shell(content, active="home", action=""){
   return `<div class="app-shell">
     <div class="topbar"><div class="toprow">
-      <div class="brand"><div class="logo">题</div><span>理解型刷题 <small style="font-size:12px;color:#7b8780;font-weight:600">Web v1.5.1</small></span></div>
+      <div class="brand"><div class="logo">题</div><span>理解型刷题 <small style="font-size:12px;color:#7b8780;font-weight:600">Web v1.5.2</small></span></div>
       ${action}
     </div></div>
     <main class="content">${content}</main>${nav(active)}
@@ -317,26 +320,34 @@ function importBackup(){
 }
 
 
-let questionStartedAt=Date.now(),timerHandle=null;
+let timerHandle=null,studySessionStartedAt=null,studySessionBase=0,calendarCursor=new Date();
 function ensureDayData(){
   if(!state.dayLogs)state.dayLogs={}; if(!state.checkins)state.checkins={}; if(!state.studySecondsByDay)state.studySecondsByDay={};
   const k=todayKey(); if(!state.dayLogs[k])state.dayLogs[k]={answers:0,correct:0,wrong:0,newLearned:0,reviews:0};
   return state.dayLogs[k];
 }
-function fmtSec(s){s=Math.max(0,Math.floor(s||0));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
-function startQuestionTimer(){questionStartedAt=Date.now();clearInterval(timerHandle);timerHandle=setInterval(()=>{const e=document.getElementById("qTimer");if(e)e.textContent=fmtSec((Date.now()-questionStartedAt)/1000)},1000)}
-function commitQuestionTime(){
-  const k=todayKey(),sec=Math.max(0,Math.round((Date.now()-questionStartedAt)/1000));
-  if(!state.studySecondsByDay)state.studySecondsByDay={};state.studySecondsByDay[k]=(state.studySecondsByDay[k]||0)+sec;
+function fmtSec(s){s=Math.max(0,Math.floor(s||0));const hh=Math.floor(s/3600),mm=Math.floor((s%3600)/60),ss=s%60;return hh?String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0"):String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0")}
+function currentSessionSeconds(){return studySessionBase+(studySessionStartedAt?Math.floor((Date.now()-studySessionStartedAt)/1000):0)}
+function startStudySession(){
+  const k=todayKey();studySessionBase=(state.studySecondsByDay?.[k]||0);studySessionStartedAt=Date.now();
+  clearInterval(timerHandle);timerHandle=setInterval(()=>{const e=document.getElementById("qTimer");if(e)e.textContent=fmtSec(currentSessionSeconds())},1000);
 }
+function saveStudySession(){
+  if(!studySessionStartedAt)return;
+  const k=todayKey();if(!state.studySecondsByDay)state.studySecondsByDay={};
+  state.studySecondsByDay[k]=currentSessionSeconds();studySessionBase=state.studySecondsByDay[k];studySessionStartedAt=Date.now();save();
+}
+function stopStudySession(){if(studySessionStartedAt){saveStudySession();studySessionStartedAt=null;}clearInterval(timerHandle)}
 function checkinToday(){ensureDayData();state.checkins[todayKey()]={ts:Date.now()};save();home();toast("今日打卡完成 ✓")}
 function showDay(k){const d=(state.dayLogs||{})[k]||{};const sec=(state.studySecondsByDay||{})[k]||0;alert(k+" 学习记录\n作答："+(d.answers||0)+"\n答对："+(d.correct||0)+"\n答错："+(d.wrong||0)+"\n学习用时："+fmtSec(sec)+(state.checkins?.[k]?"\n已打卡 ✓":""))}
+function changeMonth(delta){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+delta,1);home()}
 function calendarHTML(){
- const now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
- let a=["日","一","二","三","四","五","六"].map(x=>'<div class="cal-head">'+x+'</div>').join("");
+ const y=calendarCursor.getFullYear(),m=calendarCursor.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+ let a='<div class="calendar-nav"><button onclick="changeMonth(-1)">‹ 上月</button><b>'+y+' 年 '+(m+1)+' 月</b><button onclick="changeMonth(1)">下月 ›</button></div><div class="calendar">';
+ a+=["日","一","二","三","四","五","六"].map(x=>'<div class="cal-head">'+x+'</div>').join("");
  for(let i=0;i<first;i++)a+='<div></div>';
  for(let d=1;d<=days;d++){const k=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");a+='<button class="cal-day '+(state.checkins?.[k]?'done ':'')+(k===todayKey()?'today':'')+'" onclick="showDay(\''+k+'\')">'+d+'</button>'}
- return a;
+ return a+'</div>';
 }
 function home(){
   const wrongCount=state.wrongIds.length;
@@ -382,7 +393,7 @@ function home(){
         <div class="check-stat"><b>${fmtSec(state.studySecondsByDay?.[todayKey()]||0)}</b><span>学习时间</span></div>
       </div>
       <button class="${state.checkins?.[todayKey()]?'ghost':'primary'}" style="width:100%" onclick="checkinToday()">${state.checkins?.[todayKey()]?'今日已打卡 ✓':'今日学习打卡'}</button>
-      <div class="calendar">${calendarHTML()}</div>
+      ${calendarHTML()}
       <div class="backup-note">点日期可查看当天作答、正确、错误和学习用时。</div>
     </div>
 
@@ -468,9 +479,11 @@ function startPractice(mode,limit=null){
     ids=ordered.map(q=>q.id);
   }
   practice={queue:ids,pos:0,currentAnswer:"",done:false,correct:false,mode,plannedCount:ids.length,feedback:""};
+  stopStudySession();studySessionBase=(state.studySecondsByDay?.[todayKey()]||0);studySessionStartedAt=null;
   view="practice";renderPractice();
 }
 function go(v){
+  if(view==="practice"&&v!=="practice")stopStudySession();
   view=v;
   if(v==="home")home();
   if(v==="practice"){
@@ -538,7 +551,6 @@ function advanceReview(q,m){
   }
 }
 function recordAnswer(q,value,correct){
-  commitQuestionTime();
   const dl=ensureDayData();dl.answers++;if(correct)dl.correct++;else dl.wrong++;
   state.stats.total++;
   if(correct)state.stats.correct++;
@@ -610,6 +622,7 @@ function nextQuestion(){
     practice.pos++;practice.done=false;practice.correct=false;practice.currentAnswer="";
     renderPractice();window.scrollTo({top:0,behavior:"smooth"});
   }else{
+    stopStudySession();
     toast("本轮完成");
     home();
   }
@@ -666,7 +679,8 @@ function renderPractice(scrollToAnalysis=false){
       </div>
     </div>
   `,"practice");
-  if(!done)startQuestionTimer(); else clearInterval(timerHandle);
+  if(!studySessionStartedAt)startStudySession();
+  const te=document.getElementById("qTimer");if(te)te.textContent=fmtSec(currentSessionSeconds());
   if(scrollToAnalysis){
     setTimeout(()=>document.getElementById("analysisStart")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
   }
@@ -765,6 +779,8 @@ async function init(){
   }
   home();
 }
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&studySessionStartedAt)saveStudySession()});
+window.addEventListener("pagehide",()=>{if(studySessionStartedAt)saveStudySession()});
 init();
 </script>
 </body>
