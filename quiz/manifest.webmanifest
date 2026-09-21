@@ -1,0 +1,8 @@
+{
+  "name": "理解型刷题",
+  "short_name": "刷题",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#0f9f67"
+}
