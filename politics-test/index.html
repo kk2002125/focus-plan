@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0f9f67">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>政治理解型刷题 · 测试版</title>
+<style>
+:root{
+  --bg:#f4f7f5;--surface:#ffffff;--text:#1d2521;--muted:#6e7872;
+  --line:#e2e9e5;--green:#109965;--green2:#0a7249;--green-soft:#eaf7f0;
+  --red:#c94545;--red-soft:#fff0f0;--amber:#b77700;--amber-soft:#fff7e6;
+  --shadow:0 8px 28px rgba(24,45,34,.06);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+body{overscroll-behavior-y:none}
+button,input{font:inherit}
+button{cursor:pointer}
+.app-shell{max-width:820px;margin:0 auto;min-height:100dvh;padding:env(safe-area-inset-top) 12px calc(84px + env(safe-area-inset-bottom))}
+.topbar{position:sticky;top:0;z-index:20;margin:0 -12px;padding:12px 14px 10px;background:rgba(244,247,245,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,233,229,.75)}
+.toprow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#11ad71,#08764b);color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 6px 16px rgba(16,153,101,.25)}
+.top-action{border:0;background:var(--surface);padding:8px 11px;border-radius:11px;color:var(--green2);font-weight:700;box-shadow:var(--shadow)}
+.content{padding:14px 0 18px}
+.hero{background:linear-gradient(145deg,#0f9f67,#0b7c50);color:#fff;border-radius:22px;padding:20px;box-shadow:0 12px 30px rgba(15,159,103,.2)}
+.hero h1{font-size:24px;margin:0 0 8px}
+.hero p{margin:0;opacity:.9;line-height:1.55}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}
+.hero-stat{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:11px 8px;text-align:center}
+.hero-stat b{display:block;font-size:21px}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:20px 2px 10px}
+.section-title h2{font-size:18px;margin:0}
+.section-title span{font-size:13px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.chapter-card{display:flex;align-items:center;gap:14px}
+.chapter-icon{width:50px;height:50px;border-radius:15px;background:var(--green-soft);color:var(--green2);display:grid;place-items:center;font-size:24px;font-weight:900;flex:0 0 auto}
+.chapter-info{flex:1;min-width:0}
+.chapter-info h3{margin:0 0 5px;font-size:17px}
+.chapter-info p{margin:0;color:var(--muted);font-size:13px}
+.progress{height:8px;border-radius:999px;background:#e4ebe7;overflow:hidden;margin-top:10px}
+.progress>div{height:100%;background:var(--green);border-radius:999px}
+.primary{border:0;background:var(--green);color:#fff;padding:12px 14px;border-radius:13px;font-weight:800}
+.ghost{border:0;background:#eef2ef;color:#33413a;padding:12px 14px;border-radius:13px;font-weight:700}
+.bottom-nav{position:fixed;z-index:30;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(16px);padding:7px 10px calc(7px + env(safe-area-inset-bottom))}
+.bottom-nav-inner{max-width:820px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.nav-btn{border:0;background:transparent;padding:7px 4px 4px;color:#758079;border-radius:12px;font-size:12px}
+.nav-btn .ico{display:block;font-size:21px;line-height:1.2;margin-bottom:2px}
+.nav-btn.active{background:#edf8f2;color:var(--green2);font-weight:800}
+.qhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;color:var(--muted);font-size:13px}
+.qtitle{font-size:20px;line-height:1.65;font-weight:750;margin:0 0 16px}
+.options{display:grid;gap:10px}
+.option{width:100%;border:1.5px solid var(--line);background:#fff;text-align:left;border-radius:15px;padding:14px 15px;line-height:1.5;font-size:16px}
+.option.selected{border-color:var(--green);background:#f0faf5}
+.option.correct{border-color:#158655;background:#eaf8f1}
+.option.wrong{border-color:var(--red);background:var(--red-soft)}
+.fill-row{display:flex;gap:8px}
+.fill{flex:1;min-width:0;border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;font-size:16px;outline:none;background:#fff}
+.fill:focus{border-color:var(--green)}
+.answer-banner{margin-top:15px;padding:14px;border-radius:14px;line-height:1.55}
+.answer-banner.good{background:var(--green-soft);color:#0d6841}
+.answer-banner.bad{background:var(--red-soft);color:#a53131}
+.analysis{margin-top:14px;border-top:1px dashed #d6ded9;padding-top:10px}
+.analysis h3{font-size:17px;margin:4px 0 10px}
+.analysis-block{padding:13px 14px;border-radius:14px;margin:9px 0;line-height:1.68;font-size:15px}
+.analysis-block b{display:block;margin-bottom:3px}
+.analysis-block.principle{background:#eef8f3}
+.analysis-block.why{background:#f5f7f6}
+.analysis-block.mistake{background:#fff3ee}
+.analysis-block.memory{background:var(--amber-soft)}
+.qactions{display:flex;gap:9px;margin-top:15px}
+.qactions button{flex:1}
+.reinforce-note{margin-top:10px;color:var(--amber);font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.metric b{display:block;font-size:26px;color:var(--green2);margin-bottom:4px}
+.metric span{font-size:13px;color:var(--muted)}
+.list{display:grid;gap:10px}
+.wrong-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.wrong-card h4{margin:0 0 7px;font-size:15px;line-height:1.5}
+.tag{display:inline-block;font-size:12px;padding:4px 8px;border-radius:999px;background:#eef3f0;color:#536059}
+.mini{font-size:13px;color:var(--muted);line-height:1.55}
+.empty{text-align:center;padding:40px 18px;color:var(--muted)}
+.install-tip{background:#fff8e6;border:1px solid #f0dfb5;border-radius:14px;padding:12px 13px;font-size:13px;line-height:1.55;color:#79530a;margin-top:10px}
+.plan-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.plan-input{width:92px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);border-radius:13px;padding:11px 12px;outline:none;text-align:center;font-weight:800}
+.plan-input:focus{border-color:var(--green)}
+.quick-counts{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.quick-counts button{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:7px 11px;font-size:13px}
+.quick-counts button.active{background:var(--green-soft);border-color:#bde3d0;color:var(--green2);font-weight:800}
+.backup-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.backup-note{margin-top:10px;font-size:12px;line-height:1.65;color:var(--muted)}
+.memory-card{border:1px solid #cfe9dc;background:linear-gradient(145deg,var(--surface),var(--green-soft));border-radius:18px;padding:16px}
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.memory-stat{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:10px 8px;text-align:center}
+.memory-stat b{display:block;font-size:21px;color:var(--green2)}
+.memory-stat span{font-size:12px;color:var(--muted)}
+.memory-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.memory-hint{margin-top:10px;padding:10px 11px;border-radius:12px;background:var(--surface);border:1px dashed var(--line);font-size:12px;line-height:1.6;color:var(--muted)}
+.status-pill{display:inline-block;padding:4px 8px;border-radius:999px;background:var(--green-soft);color:var(--green2);font-size:12px;font-weight:800}
+
+
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(15px);background:#1f2924;color:#fff;border-radius:12px;padding:10px 14px;opacity:0;pointer-events:none;transition:.2s;z-index:100;font-size:13px}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:520px){
+  .app-shell{padding-left:9px;padding-right:9px}
+  .topbar{margin-left:-9px;margin-right:-9px}
+  .hero{padding:18px 16px;border-radius:19px}
+  .hero h1{font-size:22px}
+  .qtitle{font-size:18px}
+  .analysis-block{font-size:14px}
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#111814;--surface:#18211c;--text:#eaf2ed;--muted:#9aa79f;--line:#2a3730;--green-soft:#173328;--red-soft:#351f1f;--amber-soft:#332a18;--shadow:none}
+  .topbar{background:rgba(17,24,20,.94)}
+  .option,.fill{background:#18211c;color:var(--text)}
+  .ghost{background:#25312b;color:#d7e1db}
+  .analysis-block.why{background:#202a25}
+  .analysis-block.mistake{background:#321f1b}
+  .bottom-nav{background:rgba(24,33,28,.97)}
+}
+
+.study-timer{display:flex;align-items:center;gap:7px;font-variant-numeric:tabular-nums;color:var(--green2);font-weight:800;font-size:13px}
+.check-card{margin-top:10px}
+.check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.check-stat{text-align:center;background:var(--green-soft);border-radius:12px;padding:10px 5px}
+.check-stat b{display:block;font-size:20px;color:var(--green2)}
+.calendar-nav{display:flex;align-items:center;justify-content:space-between;margin:12px 0 4px}
+.calendar-nav button{border:0;background:#eef2ef;color:var(--text);border-radius:10px;padding:7px 12px;font-weight:800}
+.calendar-nav b{font-size:15px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:12px}
+.cal-head{text-align:center;font-size:11px;color:var(--muted);padding:4px 0}
+.cal-day{border:0;min-height:38px;border-radius:10px;background:#eef2ef;color:var(--text);font-size:12px}
+.cal-day.done{background:var(--green);color:#fff;font-weight:800}
+.cal-day.today{outline:2px solid var(--green)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast" class="toast"></div>
+<script>
+window.__EMBEDDED_QUESTIONS__=[{"id":1,"chapter":"导论","type":"choice","q":"马克思主义中国化时代化实现了（ ）历史性飞跃。","options":["A. 一次","B. 两次","C. 三次","D. 四次"],"answer":"C","principle":"本题按你提供的《政治理论1200题》答案口径判定。","why":"在中国革命、建设、改革的历史进程中，马克思主义中国化时代化实现了三次历史性飞跃。","mistake":"本题容易受旧教材或旧表述影响。当前这套题库的标准答案为“三次”。","memory":"记住关键词：三次历史性飞跃。","tag":"导论"},{"id":2,"chapter":"导论","type":"choice","q":"马克思主义中国化时代化的两大理论成果共同的“根”是（ ）","options":["A. 中国革命的具体实际","B. 马克思列宁主义","C. 中国革命的历史经验","D. 社会主义建设的实践"],"answer":"B","principle":"本题考查两大理论成果共同的理论根基。","why":"马克思主义中国化时代化两大理论成果是毛泽东思想和中国特色社会主义理论体系，共同的“根”是马克思列宁主义。","mistake":"不要把“中国具体实际”与题目所问的共同理论之“根”混淆。","memory":"共同的“根”＝马克思列宁主义。","tag":"理论成果"},{"id":3,"chapter":"导论","type":"choice","q":"马克思主义中国化时代化形成的两大理论成果，分别为（ ）","options":["A. 毛泽东思想与中国特色社会主义理论体系","B. 毛泽东思想与邓小平理论","C. 科学发展观与邓小平理论","D. “三个代表”重要思想与习近平新时代中国特色社会主义思想"],"answer":"A","principle":"本题考查马克思主义中国化时代化形成的两大理论成果。","why":"马克思主义中国化时代化形成两大理论成果分别为毛泽东思想、中国特色社会主义理论体系，其中中国特色社会主义理论体系包括邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想。","mistake":"邓小平理论、“三个代表”重要思想、科学发展观等属于中国特色社会主义理论体系中的具体理论成果，不能与“两大理论成果”这一层级混淆。","memory":"两大成果：毛泽东思想＋中国特色社会主义理论体系。","tag":"理论成果"},{"id":4,"chapter":"导论","type":"choice","q":"把马克思主义基本原理同中国具体实际和时代特征相结合的问题，也就是如何实现马克思主义（ ）的问题。","options":["A. 时代化","B. 现代化","C. 中国化时代化","D. 大众化"],"answer":"C","principle":"题干本身给出了马克思主义基本原理同中国具体实际和时代特征相结合这一关键表述。","why":"把马克思主义基本原理同中国具体实际和时代特征相结合的问题，即如何实现马克思主义中国化时代化。","mistake":"不要只选“时代化”，题干同时强调中国具体实际和时代特征。","memory":"中国实际＋时代特征 → 中国化时代化。","tag":"中国化时代化"},{"id":5,"chapter":"导论","type":"choice","q":"中国共产党在推进马克思主义中国化时代化过程中，形成的第一次历史性飞跃的理论成果为（ ）","options":["A. 毛泽东思想","B. 科学发展观","C. “三个代表”重要思想","D. 邓小平理论"],"answer":"A","principle":"本题考查第一次历史性飞跃对应的理论成果。","why":"马克思主义中国化时代化第一次历史性飞跃形成了毛泽东思想。","mistake":"邓小平理论、“三个代表”重要思想、科学发展观都不对应第一次历史性飞跃。","memory":"第一次历史性飞跃 → 毛泽东思想。","tag":"历史性飞跃"},{"id":6,"chapter":"导论","type":"choice","q":"中国特色社会主义理论体系不包括（ ）","options":["A. 邓小平理论","B. 科学发展观","C. 习近平新时代中国特色社会主义思想","D. 毛泽东思想"],"answer":"D","principle":"本题考查中国特色社会主义理论体系的构成。","why":"中国特色社会主义理论体系包括邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想。","mistake":"毛泽东思想与中国特色社会主义理论体系属于两个不同层级的理论成果，不能把毛泽东思想纳入中国特色社会主义理论体系。","memory":"看到“不包括” → 毛泽东思想。","tag":"理论体系"},{"id":7,"chapter":"导论","type":"choice","q":"毛泽东首次明确提出“马克思主义中国化”重大命题的报告是（ ）","options":["A. 《湖南农民运动考察报告》","B. 《论新阶段》","C. 《论联合政府》","D. 《论人民民主专政》"],"answer":"B","principle":"本题考查“马克思主义中国化”命题提出时对应的报告。","why":"毛泽东在党的六届六中全会所作的《论新阶段》正式提出“马克思主义中国化”重大命题。","mistake":"本题问的是“报告”，不要与下一题所问的“会议”混淆。","memory":"报告＝《论新阶段》；会议＝六届六中全会。","tag":"命题提出"},{"id":8,"chapter":"导论","type":"choice","q":"标志着“马克思主义中国化”这一命题正式提出的会议是（ ）。","options":["A. 党的六届六中全会","B. 党的一大","C. 党的二大","D. 党的七大"],"answer":"A","principle":"本题考查“马克思主义中国化”重大命题正式提出时对应的会议。","why":"毛泽东在党的六届六中全会所作的《论新阶段》正式提出“马克思主义中国化”重大命题。","mistake":"第7题考报告，第8题考会议，两题应成组记忆。","memory":"《论新阶段》＋六届六中全会。","tag":"命题提出"},{"id":9,"chapter":"导论","type":"choice","q":"毛泽东思想和中国特色社会主义理论体系作为马克思主义中国化时代化的两大理论成果，理论基础是（ ）。","options":["A. 新民主主义革命的基本理论","B. 社会主义改革开放理论","C. 马克思列宁主义","D. 悠久的中国传统文化"],"answer":"C","principle":"本题考查两大理论成果共同的理论基础。","why":"毛泽东思想和中国特色社会主义理论体系共同的理论基础是马克思列宁主义。","mistake":"“中国革命具体实际”“改革开放实践”等是重要实践内容，但本题问的是理论基础。","memory":"理论基础＝马克思列宁主义。","tag":"理论基础"},{"id":10,"chapter":"导论","type":"choice","q":"马克思主义理论研究和建设工程重点教材《毛泽东思想和中国特色社会主义理论体系概论》的主线是（ ）。","options":["A. 实事求是","B. 马克思主义中国化时代化","C. 与时俱进","D. 理论联系实际"],"answer":"B","principle":"本题考查《毛泽东思想和中国特色社会主义理论体系概论》的主线。","why":"马克思主义中国化时代化是贯穿《毛泽东思想和中国特色社会主义理论体系概论》的主线。","mistake":"实事求是、与时俱进、理论联系实际都是常见重要表述，但这道题问教材“主线”。","memory":"《毛概》主线＝马克思主义中国化时代化。","tag":"教材主线"},{"id":11,"chapter":"导论","type":"choice","q":"对马克思主义中国化从理论上作了进一步阐述是在（ ）。","options":["A. 党的一大","B. 党的二大","C. 六届六中全会","D. 党的七大"],"answer":"D","principle":"本题按你提供的题库标准答案区分“正式提出”与“进一步阐述”。","why":"在党的七大上，刘少奇代表党中央作了《关于修改党章的报告》，对马克思主义中国化从理论上作了进一步阐述。","mistake":"六届六中全会对应“马克思主义中国化”重大命题的正式提出；本题问的是从理论上进一步阐述。","memory":"六届六中：提出；七大：进一步阐述。","tag":"理论阐述"},{"id":12,"chapter":"导论","type":"multi","q":"中国特色社会主义理论体系包括（ ）","options":["A. “三个代表”重要思想","B. 邓小平理论","C. 科学发展观","D. 习近平新时代中国特色社会主义思想"],"answer":"ABCD","principle":"本题为多项选择题，按你提供的《政治理论1200题》标准答案判定。","why":"中国特色社会主义理论体系包括邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想。","mistake":"多选题必须选全且不能多选；少选或多选都判错。","memory":"中国特色社会主义理论体系：邓小平理论＋“三个代表”重要思想＋科学发展观＋习近平新时代中国特色社会主义思想。","tag":"理论体系"}]
+</script>
+<script>
+const APP_VERSION = "politics-0.1.0";
+const STORE_KEY = "politics_quiz_pwa_v0_1";
+const app = document.getElementById("app");
+const toastEl = document.getElementById("toast");
+let questions = [];
+let deferredPrompt = null;
+let view = "home";
+let practice = null;
+
+function defaultState(){
+  return {
+    answers:{},
+    stats:{total:0,correct:0},
+    wrongIds:[],
+    masteredIds:[],
+    history:[],
+    lastQuestionId:null,
+    dailyCount:10,
+    memory:{},
+    dayLogs:{},
+    checkins:{},
+    studySecondsByDay:{},
+    studyDayStartHour:4,
+    dataVersion:2,
+    lastSavedAt:null,
+    dayLogs:{},checkins:{},studySecondsByDay:{}
+  };
+}
+function loadState(){
+  try{return {...defaultState(), ...(JSON.parse(localStorage.getItem(STORE_KEY)||"{}"))};}
+  catch(e){return defaultState();}
+}
+let state = loadState();
+function save(){state.lastSavedAt=Date.now();localStorage.setItem(STORE_KEY, JSON.stringify(state));}
+function toast(msg){
+  toastEl.textContent=msg;toastEl.classList.add("show");
+  setTimeout(()=>toastEl.classList.remove("show"),1600);
+}
+function nav(active){
+  return `<div class="bottom-nav"><div class="bottom-nav-inner">
+    ${[
+      ["home","⌂","首页"],["practice","✎","刷题"],["wrong","↺","错题"],["stats","▦","数据"]
+    ].map(([k,i,t])=>`<button class="nav-btn ${active===k?'active':''}" onclick="go('${k}')"><span class="ico">${i}</span>${t}</button>`).join("")}
+  </div></div>`;
+}
+function shell(content, active="home", action=""){
+  return `<div class="app-shell">
+    <div class="topbar"><div class="toprow">
+      <div class="brand"><div class="logo">题</div><span>政治理解型刷题 <small style="font-size:12px;color:#7b8780;font-weight:600">v0.1</small></span></div>
+      ${action}
+    </div></div>
+    <main class="content">${content}</main>${nav(active)}
+  </div>`;
+}
+function accuracy(){
+  return state.stats.total ? Math.round(state.stats.correct/state.stats.total*100) : 0;
+}
+function chapterProgress(){
+  const done = questions.filter(q=>state.answers[q.id]).length;
+  return Math.round(done/questions.length*100)||0;
+}
+
+const REVIEW_DAYS=[1,3,7,14,30,60];
+const DAY_MS=24*60*60*1000;
+
+function todayKey(ts=Date.now()){
+  const d=new Date(ts);
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+}
+function startOfDay(ts=Date.now()){
+  const d=new Date(ts);d.setHours(0,0,0,0);return d.getTime();
+}
+function addDaysFrom(ts,days){return startOfDay(ts)+days*DAY_MS;}
+function formatDay(ts){
+  if(!ts)return "—";
+  const d=new Date(ts);return `${d.getMonth()+1}月${d.getDate()}日`;
+}
+function memoryFor(id){
+  if(!state.memory || typeof state.memory!=="object")state.memory={};
+  return state.memory[id]||null;
+}
+function ensureLearningMemory(id){
+  if(!state.memory || typeof state.memory!=="object")state.memory={};
+  if(!state.memory[id])state.memory[id]={phase:"learning",todayPasses:0,learningDay:todayKey(),cycleStart:null,stage:0,dueTs:null,lapses:0};
+  return state.memory[id];
+}
+function migrateMemory(){
+  let changed=false;
+  if(!state.memory || typeof state.memory!=="object"){state.memory={};changed=true;}
+  (state.wrongIds||[]).forEach(id=>{
+    if(!state.memory[id]){
+      state.memory[id]={phase:"learning",todayPasses:0,learningDay:todayKey(),cycleStart:null,stage:0,dueTs:null,lapses:0};
+      changed=true;
+    }
+  });
+  if(changed)save();
+}
+function todayUniqueDone(){
+  const k=todayKey();
+  return new Set(state.history.filter(h=>todayKey(h.ts)===k).map(h=>h.id)).size;
+}
+function learningIds(){
+  return questions.filter(q=>memoryFor(q.id)?.phase==="learning").map(q=>q.id);
+}
+function dueReviewIds(){
+  const now=Date.now();
+  return questions.filter(q=>{
+    const m=memoryFor(q.id);
+    return m?.phase==="review" && m.dueTs && m.dueTs<=now;
+  }).map(q=>q.id);
+}
+function activeReviewCount(){
+  return questions.filter(q=>memoryFor(q.id)?.phase==="review").length;
+}
+function longTermMasteredCount(){
+  return questions.filter(q=>memoryFor(q.id)?.phase==="mastered").length;
+}
+function newQuestionIdsInOrder(){
+  let base=[...questions],start=0;
+  if(state.lastQuestionId){
+    const i=base.findIndex(q=>q.id===state.lastQuestionId);
+    if(i>=0)start=(i+1)%base.length;
+  }
+  const ordered=base.slice(start).concat(base.slice(0,start));
+  return ordered.filter(q=>!memoryFor(q.id)).map(q=>q.id);
+}
+function setDailyCount(n){
+  n=Math.max(1,Math.min(999,parseInt(n)||10));
+  state.dailyCount=n;save();
+  const el=document.getElementById("dailyCount");
+  if(el)el.value=n;
+  document.querySelectorAll(".quick-counts button").forEach(b=>b.classList.toggle("active",Number(b.dataset.n)===n));
+}
+function startDaily(){
+  const el=document.getElementById("dailyCount");
+  const n=Math.max(1,Math.min(questions.length,parseInt(el?.value||state.dailyCount||10)||10));
+  state.dailyCount=n;save();
+  startPractice("daily",n);
+}
+function startDueReview(){startPractice("review");}
+function startLearningQueue(){startPractice("learning");}
+function exportBackup(){
+  const payload={app:"政治理解型刷题",version:APP_VERSION,exportedAt:new Date().toISOString(),storeKey:STORE_KEY,state};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  const d=new Date();
+  const stamp=`${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}`;
+  a.href=url;a.download=`理解型刷题_备份_${stamp}.json`;a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),500);
+  toast("备份已导出");
+}
+function importBackup(){
+  const input=document.createElement("input");
+  input.type="file";input.accept=".json,application/json";
+  input.onchange=async()=>{
+    const file=input.files?.[0];if(!file)return;
+    try{
+      const obj=JSON.parse(await file.text());
+      const incoming=obj?.state||obj;
+      if(!incoming || typeof incoming!=="object" || !incoming.stats)throw new Error("不是有效的刷题备份");
+      if(!confirm("导入会覆盖当前手机上的学习记录，确定继续吗？"))return;
+      state={...defaultState(),...incoming};
+      state.answers=state.answers||{};
+      state.wrongIds=Array.isArray(state.wrongIds)?state.wrongIds:[];
+      state.masteredIds=Array.isArray(state.masteredIds)?state.masteredIds:[];
+      state.history=Array.isArray(state.history)?state.history:[];
+      state.memory=(state.memory&&typeof state.memory==="object")?state.memory:{};
+      migrateMemory();save();toast("备份导入成功");home();
+    }catch(e){alert("导入失败："+(e.message||"文件格式不正确"));}
+  };
+  input.click();
+}
+
+
+let timerHandle=null,studySessionStartedAt=null,studySessionBase=0,calendarCursor=new Date();
+function ensureDayData(){
+  if(!state.dayLogs)state.dayLogs={}; if(!state.checkins)state.checkins={}; if(!state.studySecondsByDay)state.studySecondsByDay={};
+  const k=todayKey(); if(!state.dayLogs[k])state.dayLogs[k]={answers:0,correct:0,wrong:0,newLearned:0,reviews:0};
+  return state.dayLogs[k];
+}
+function fmtSec(s){s=Math.max(0,Math.floor(s||0));const hh=Math.floor(s/3600),mm=Math.floor((s%3600)/60),ss=s%60;return hh?String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0"):String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0")}
+function currentSessionSeconds(){return studySessionBase+(studySessionStartedAt?Math.floor((Date.now()-studySessionStartedAt)/1000):0)}
+function startStudySession(){
+  const k=todayKey();studySessionBase=(state.studySecondsByDay?.[k]||0);studySessionStartedAt=Date.now();
+  clearInterval(timerHandle);timerHandle=setInterval(()=>{const e=document.getElementById("qTimer");if(e)e.textContent=fmtSec(currentSessionSeconds())},1000);
+}
+function saveStudySession(){
+  if(!studySessionStartedAt)return;
+  const k=todayKey();if(!state.studySecondsByDay)state.studySecondsByDay={};
+  state.studySecondsByDay[k]=currentSessionSeconds();studySessionBase=state.studySecondsByDay[k];studySessionStartedAt=Date.now();save();
+}
+function stopStudySession(){if(studySessionStartedAt){saveStudySession();studySessionStartedAt=null;}clearInterval(timerHandle)}
+function checkinToday(){ensureDayData();state.checkins[todayKey()]={ts:Date.now()};save();home();toast("今日打卡完成 ✓")}
+function showDay(k){const d=(state.dayLogs||{})[k]||{};const sec=(state.studySecondsByDay||{})[k]||0;alert(k+" 学习记录\n作答："+(d.answers||0)+"\n答对："+(d.correct||0)+"\n答错："+(d.wrong||0)+"\n学习用时："+fmtSec(sec)+(state.checkins?.[k]?"\n已打卡 ✓":""))}
+function changeMonth(delta){calendarCursor=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+delta,1);home()}
+function calendarHTML(){
+ const y=calendarCursor.getFullYear(),m=calendarCursor.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+ let a='<div class="calendar-nav"><button onclick="changeMonth(-1)">‹ 上月</button><b>'+y+' 年 '+(m+1)+' 月</b><button onclick="changeMonth(1)">下月 ›</button></div><div class="calendar">';
+ a+=["日","一","二","三","四","五","六"].map(x=>'<div class="cal-head">'+x+'</div>').join("");
+ for(let i=0;i<first;i++)a+='<div></div>';
+ for(let d=1;d<=days;d++){const k=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");a+='<button class="cal-day '+(state.checkins?.[k]?'done ':'')+(k===todayKey()?'today':'')+'" onclick="showDay(\''+k+'\')">'+d+'</button>'}
+ return a+'</div>';
+}
+function home(){
+  const wrongCount=state.wrongIds.length;
+  const installBtn = deferredPrompt ? `<button class="top-action" onclick="installApp()">安装APP</button>` : "";
+  const todayDone=todayUniqueDone();
+  const dailyCount=Math.max(1,Math.min(questions.length,state.dailyCount||10));
+  const due=dueReviewIds().length;
+  const learning=learningIds().length;
+  const active=activeReviewCount();
+  const mature=longTermMasteredCount();
+  const newCount=newQuestionIdsInOrder().length;
+  app.innerHTML=shell(`
+    <section class="hero">
+      <h1>政治题今天继续真正记住</h1>
+      <p>当天先通过两次间隔验证，再进入 1·3·7·14·30·60 天记忆曲线。</p>
+      <div class="hero-grid">
+        <div class="hero-stat"><b>${todayDone}</b><span>今日已刷</span></div>
+        <div class="hero-stat"><b>${due}</b><span>到期复习</span></div>
+        <div class="hero-stat"><b>${wrongCount}</b><span>当前错题</span></div>
+      </div>
+    </section>
+
+    <div class="section-title"><h2>今日记忆任务</h2><span>优先处理到期内容</span></div>
+    <div class="memory-card">
+      <b style="font-size:18px">间隔复习队列</b>
+      <div class="memory-grid">
+        <div class="memory-stat"><b>${due}</b><span>到期/逾期</span></div>
+        <div class="memory-stat"><b>${learning}</b><span>学习中</span></div>
+        <div class="memory-stat"><b>${active+mature}</b><span>记忆曲线中</span></div>
+      </div>
+      <div class="memory-actions">
+        <button class="primary" onclick="startDueReview()" ${due?"":"disabled"}>复习到期题 ${due?`(${due})`:""}</button>
+        <button class="ghost" onclick="startLearningQueue()" ${learning?"":"disabled"}>继续学习中 ${learning?`(${learning})`:""}</button>
+      </div>
+      <div class="memory-hint">规则：新题或忘记的题，当天必须“间隔答对 2 次”才算完成；任何一次答错都会清零并继续推回。进入长期复习后，在 1/3/7/14/30/60 天节点答对就向后推进；节点答错则重新学习，并从新的完成日期重新开始整条曲线。</div>
+    </div>
+
+    <div class="section-title"><h2>学习打卡</h2><span>${new Date().getMonth()+1} 月</span></div>
+    <div class="card check-card">
+      <div class="check-grid">
+        <div class="check-stat"><b>${ensureDayData().answers||0}</b><span>今日作答</span></div>
+        <div class="check-stat"><b>${ensureDayData().correct||0}</b><span>答对</span></div>
+        <div class="check-stat"><b>${fmtSec(state.studySecondsByDay?.[todayKey()]||0)}</b><span>学习时间</span></div>
+      </div>
+      <button class="${state.checkins?.[todayKey()]?'ghost':'primary'}" style="width:100%" onclick="checkinToday()">${state.checkins?.[todayKey()]?'今日已打卡 ✓':'今日学习打卡'}</button>
+      ${calendarHTML()}
+      <div class="backup-note">点日期可查看当天作答、正确、错误和学习用时。</div>
+    </div>
+
+    <div class="section-title"><h2>今日新题计划</h2><span>剩余新题 ${newCount}</span></div>
+    <div class="card">
+      <div class="plan-row">
+        <div style="flex:1;min-width:180px">
+          <b style="font-size:18px">今天准备学多少道新题？</b>
+          <p class="mini" style="margin:5px 0 0">只安排尚未进入记忆系统的新题；学习中和到期题由上面的队列负责。</p>
+        </div>
+        <input id="dailyCount" class="plan-input" type="number" min="1" max="${Math.max(1,questions.length)}" value="${dailyCount}" onchange="setDailyCount(this.value)">
+        <button class="primary" onclick="startDaily()" ${newCount?"":"disabled"}>开始新题</button>
+      </div>
+      <div class="quick-counts">
+        ${[5,10,15,questions.length].filter((n,i,a)=>n<=questions.length&&a.indexOf(n)===i).map(n=>`<button data-n="${n}" class="${n===dailyCount?'active':''}" onclick="setDailyCount(${n})">${n===questions.length?'本章全部':n+'题'}</button>`).join("")}
+      </div>
+      <div class="backup-note">设定数量按“不同的新题”计算。每道题当天为了验证记忆而再次出现，不占你的新题额度。</div>
+    </div>
+
+    <div class="section-title"><h2>政治章节题库</h2><span>${chapterProgress()}% 已接触</span></div>
+    <div class="card chapter-card">
+      <div class="chapter-icon">01</div>
+      <div class="chapter-info">
+        <h3>第一章《绪论》</h3>
+        <p>${questions.length} 题 · 选择 + 填空 · 含原理解析</p>
+        <div class="progress"><div style="width:${chapterProgress()}%"></div></div>
+      </div>
+      <button class="ghost" onclick="startPractice('continue')">整章练习</button>
+    </div>
+
+    <div class="section-title"><h2>专项模式</h2><span>按需要选择</span></div>
+    <div class="grid2">
+      <div class="card">
+        <b style="font-size:18px">顺序刷题</b>
+        <p class="mini">手动完整练习题库。遇到新题仍会纳入记忆系统，遇到已到期题也会计入复习。</p>
+        <button class="ghost" style="width:100%;margin-top:5px" onclick="startPractice('normal')">完整顺序刷</button>
+      </div>
+      <div class="card">
+        <b style="font-size:18px">只刷错题</b>
+        <p class="mini">集中处理当前错题；完成两次间隔答对后重新进入记忆曲线。</p>
+        <button class="ghost" style="width:100%;margin-top:5px" onclick="startPractice('wrong')">错题训练</button>
+      </div>
+    </div>
+
+    <div class="section-title"><h2>数据安全</h2><span>换手机也能恢复</span></div>
+    <div class="card">
+      <b style="font-size:18px">学习记录备份</b>
+      <p class="mini">备份现在也包含每道题的记忆阶段、下次复习日期和遗忘重置次数。</p>
+      <div class="backup-actions">
+        <button class="primary" onclick="exportBackup()">导出备份</button>
+        <button class="ghost" onclick="importBackup()">导入备份</button>
+      </div>
+      <div class="backup-note">换手机：旧手机导出 JSON → 发到新手机 → 新手机打开网页 → 导入备份。</div>
+    </div>
+
+    ${!deferredPrompt?`<div class="install-tip">建议部署到固定 HTTPS 地址后长期使用，并定期导出备份。记忆曲线数据保存在浏览器本地，清理网站数据会清空记录。</div>`:""}
+  `,"home",installBtn);
+}
+function startPractice(mode,limit=null){
+  let ids=[];
+  if(mode==="review"){
+    ids=dueReviewIds();
+    if(!ids.length){toast("今天没有到期复习题");return;}
+  }else if(mode==="learning"){
+    ids=learningIds();
+    if(!ids.length){toast("目前没有学习中的题");return;}
+  }else if(mode==="wrong"){
+    ids=questions.filter(q=>state.wrongIds.includes(q.id)).map(q=>q.id);
+    if(!ids.length){toast("现在没有错题");return;}
+  }else if(mode==="daily"){
+    ids=newQuestionIdsInOrder();
+    if(!ids.length){toast("当前没有新题，先完成复习任务");return;}
+    const n=Math.max(1,Math.min(ids.length,parseInt(limit)||state.dailyCount||10));
+    ids=ids.slice(0,n);
+    if(n<(parseInt(limit)||state.dailyCount||10))toast(`当前只剩 ${n} 道新题`);
+  }else{
+    let base=[...questions],start=0;
+    if(mode==="continue" && state.lastQuestionId){
+      const i=base.findIndex(q=>q.id===state.lastQuestionId);
+      if(i>=0)start=(i+1)%base.length;
+    }
+    const ordered=base.slice(start).concat(base.slice(0,start));
+    ids=ordered.map(q=>q.id);
+  }
+  practice={queue:ids,pos:0,currentAnswer:"",done:false,correct:false,mode,plannedCount:ids.length,feedback:""};
+  stopStudySession();studySessionBase=(state.studySecondsByDay?.[todayKey()]||0);studySessionStartedAt=null;
+  view="practice";renderPractice();
+}
+function go(v){
+  if(view==="practice"&&v!=="practice")stopStudySession();
+  view=v;
+  if(v==="home")home();
+  if(v==="practice"){
+    if(!practice) startPractice("continue"); else renderPractice();
+  }
+  if(v==="wrong")wrongView();
+  if(v==="stats")statsView();
+}
+function getQ(){return questions.find(q=>q.id===practice.queue[practice.pos]);}
+function normalize(s){return (s||"").trim().replace(/\s+/g,"").replace(/[，,；;]/g,";")}
+function fillCorrect(q,v){
+  if(q.display_answer && normalize(v)===normalize(q.display_answer)) return true;
+  const p=normalize(v).split(";").filter(Boolean);
+  if(q.answers.length===1)return q.answers[0].some(a=>normalize(a)===normalize(v));
+  if(p.length!==q.answers.length)return false;
+  return q.answers.every((g,i)=>g.some(a=>normalize(a)===normalize(p[i])));
+}
+function isCorrect(q,v){
+  if(q.type==="choice"||q.type==="truefalse")return v===q.answer;
+  if(q.type==="multi")return String(v||"").split("").sort().join("")===String(q.answer||"").split("").sort().join("");
+  return fillCorrect(q,v);
+}
+function answerText(q){
+  if(q.type==="choice"||q.type==="truefalse")return q.options.find(o=>o[0]===q.answer)||q.answer;
+  if(q.type==="multi")return q.answer.split("").map(k=>q.options.find(o=>o[0]===k)||k).join("<br>");
+  return q.display_answer;
+}
+function enqueueAgain(id,offset){
+  if(!practice)return;
+  const future=practice.queue.slice(practice.pos+1);
+  if(future.includes(id))return;
+  const at=Math.min(practice.pos+1+offset,practice.queue.length);
+  practice.queue.splice(at,0,id);
+}
+function completeLearning(q,m){
+  const now=Date.now();
+  const wasWrong=state.wrongIds.includes(q.id);
+  m.phase="review";
+  m.todayPasses=2;
+  m.learningDay=todayKey();
+  m.cycleStart=now;
+  m.stage=0;
+  m.dueTs=addDaysFrom(now,REVIEW_DAYS[0]);
+  m.lastDailyComplete=todayKey();
+  state.wrongIds=state.wrongIds.filter(id=>id!==q.id);
+  if(wasWrong && !state.masteredIds.includes(q.id))state.masteredIds.push(q.id);
+  practice.feedback=`今日学习完成 ✓ 已进入记忆曲线；下次复习：${formatDay(m.dueTs)}（第 1 天）。`;
+}
+function resetToLearning(q,m){
+  m.phase="learning";
+  m.todayPasses=0;
+  m.learningDay=todayKey();
+  m.cycleStart=null;
+  m.stage=0;
+  m.dueTs=null;
+  m.lapses=(m.lapses||0)+1;
+  if(!state.wrongIds.includes(q.id))state.wrongIds.push(q.id);
+  enqueueAgain(q.id,4);
+  practice.feedback="这次忘记了：记忆曲线已重置。题目会再次推回；今天重新完成 2 次间隔答对后，再从第 1 天开始。";
+}
+function advanceReview(q,m){
+  const now=Date.now();
+  let next=m.stage+1;
+  // 若复习明显逾期，跳过已经过去的检查点，找到下一个仍在未来的节点。
+  while(next<REVIEW_DAYS.length && addDaysFrom(m.cycleStart,REVIEW_DAYS[next])<=now)next++;
+  if(next>=REVIEW_DAYS.length){
+    m.phase="mastered";m.stage=REVIEW_DAYS.length;m.dueTs=null;
+    practice.feedback="本轮长期记忆节点全部通过 ✓ 已完成 1·3·7·14·30·60 天复习。";
+  }else{
+    m.stage=next;
+    m.dueTs=addDaysFrom(m.cycleStart,REVIEW_DAYS[next]);
+    practice.feedback=`复习通过 ✓ 下一节点：${formatDay(m.dueTs)}（第 ${REVIEW_DAYS[next]} 天）。`;
+  }
+}
+function recordAnswer(q,value,correct){
+  const dl=ensureDayData();dl.answers++;if(correct)dl.correct++;else dl.wrong++;
+  state.stats.total++;
+  if(correct)state.stats.correct++;
+  const prev=state.answers[q.id]||{};
+  state.answers[q.id]={...prev,value,correct,ts:Date.now(),streak:correct?(prev.streak||0)+1:0};
+  state.history.unshift({id:q.id,correct,ts:Date.now()});
+  state.history=state.history.slice(0,500);
+  let m=memoryFor(q.id);
+
+  if(m?.phase==="review"){
+    const isDue=!!(m.dueTs && m.dueTs<=Date.now());
+    if(!correct){
+      resetToLearning(q,m);
+    }else if(isDue){
+      advanceReview(q,m);
+    }else{
+      practice.feedback=`回答正确。正式复习日仍是 ${formatDay(m.dueTs)}，本次额外练习不会提前推进记忆曲线。`;
+    }
+  }else if(m?.phase==="mastered"){
+    if(!correct)resetToLearning(q,m);
+    else practice.feedback="回答正确 ✓ 这道题已完成长期记忆周期。";
+  }else{
+    m=m||ensureLearningMemory(q.id);
+    if(m.learningDay!==todayKey()){
+      m.learningDay=todayKey();m.todayPasses=0;
+    }
+    if(!correct){
+      m.todayPasses=0;
+      if(!state.wrongIds.includes(q.id))state.wrongIds.push(q.id);
+      enqueueAgain(q.id,4);
+      practice.feedback="回答错误：今日掌握计数已清零，稍后会再次出现。";
+    }else{
+      m.phase="learning";
+      m.todayPasses=(m.todayPasses||0)+1;
+      if(m.todayPasses>=2){
+        completeLearning(q,m);
+      }else{
+        enqueueAgain(q.id,8);
+        practice.feedback="第一次间隔验证通过 ✓ 还需要再答对 1 次才算今日完成，稍后会再次出现。";
+      }
+    }
+  }
+  state.lastQuestionId=q.id;
+  save();
+}
+function choose(k){
+  if(practice.done)return;
+  const q=getQ();
+  practice.currentAnswer=k;
+  practice.correct=isCorrect(q,k);
+  practice.done=true;
+  recordAnswer(q,k,practice.correct);
+  renderPractice(true);
+}
+function toggleMulti(k){
+  if(practice.done)return;
+  let v=String(practice.currentAnswer||"");
+  v=v.includes(k)?v.replace(k,""):v+k;
+  practice.currentAnswer=v.split("").sort().join("");
+  renderPractice(false);
+}
+function submitMulti(){
+  if(practice.done)return;
+  const q=getQ(),v=String(practice.currentAnswer||"");
+  if(!v){toast("请至少选择一个选项");return;}
+  practice.correct=isCorrect(q,v);
+  practice.done=true;
+  recordAnswer(q,v,practice.correct);
+  renderPractice(true);
+}
+function submitFill(){
+  if(practice.done)return;
+  const el=document.getElementById("fill");
+  const v=el?el.value:practice.currentAnswer;
+  if(!normalize(v)){toast("先填写答案");return;}
+  const q=getQ();
+  practice.currentAnswer=v;
+  practice.correct=isCorrect(q,v);
+  practice.done=true;
+  recordAnswer(q,v,practice.correct);
+  renderPractice(true);
+}
+function nextQuestion(){
+  if(practice.pos<practice.queue.length-1){
+    practice.pos++;practice.done=false;practice.correct=false;practice.currentAnswer="";
+    renderPractice();window.scrollTo({top:0,behavior:"smooth"});
+  }else{
+    stopStudySession();
+    toast("本轮完成");
+    home();
+  }
+}
+function prevQuestion(){
+  if(practice.pos>0){
+    practice.pos--;practice.done=false;practice.correct=false;practice.currentAnswer="";
+    renderPractice();window.scrollTo({top:0,behavior:"smooth"});
+  }
+}
+function renderPractice(scrollToAnalysis=false){
+  const q=getQ();
+  const done=practice.done;
+  const progress=Math.round((practice.pos+1)/practice.queue.length*100);
+  let input="";
+  if(q.type==="choice"||q.type==="truefalse"){
+    input=`<div class="options">${q.options.map(o=>{
+      const k=o[0];let c="option";
+      if(practice.currentAnswer===k)c+=" selected";
+      if(done&&k===q.answer)c+=" correct";
+      if(done&&practice.currentAnswer===k&&k!==q.answer)c+=" wrong";
+      return `<button class="${c}" ${done?"disabled":""} onclick="choose('${k}')">${o}</button>`;
+    }).join("")}</div>`;
+  }else if(q.type==="multi"){
+    const selected=String(practice.currentAnswer||"");
+    input=`<div class="options">${q.options.map(o=>{
+      const k=o[0];let c="option";
+      if(selected.includes(k))c+=" selected";
+      if(done&&q.answer.includes(k))c+=" correct";
+      if(done&&selected.includes(k)&&!q.answer.includes(k))c+=" wrong";
+      return `<button class="${c}" ${done?"disabled":""} onclick="toggleMulti('${k}')">${o}</button>`;
+    }).join("")}</div>
+    <button class="primary" style="width:100%;margin-top:12px" ${done?"disabled":""} onclick="submitMulti()">提交多选答案</button>`;
+  }else{
+    input=`<div class="fill-row">
+      <input id="fill" class="fill" placeholder="请输入答案" value="${practice.currentAnswer||""}" ${done?"disabled":""} oninput="practice.currentAnswer=this.value" onkeydown="if(event.key==='Enter')submitFill()">
+      <button class="primary" ${done?"disabled":""} onclick="submitFill()">答题</button>
+    </div>`;
+  }
+  let answer="";
+  if(done){
+    answer=`<div id="analysisStart" class="answer-banner ${practice.correct?'good':'bad'}">
+      <b>${practice.correct?'✓ 回答正确':'✗ 回答错误'}</b><br>正确答案：<b>${answerText(q)}</b>
+    </div>
+    ${practice.feedback?`<div class="reinforce-note">${practice.feedback}</div>`:""}
+    <div class="analysis">
+      <h3>详细原理解析</h3>
+      <div class="analysis-block principle"><b>① 核心原理</b>${q.principle}</div>
+      <div class="analysis-block why"><b>② 为什么是这个答案</b>${q.why}</div>
+      <div class="analysis-block mistake"><b>③ 易错点</b>${q.mistake}</div>
+      <div class="analysis-block memory"><b>④ 快速记忆</b>${q.memory}</div>
+    </div>`;
+  }
+  app.innerHTML=shell(`
+    <div class="card">
+      <div class="qhead"><span>${q.chapter} · ${q.type==="choice"?"单选题":q.type==="multi"?"多选题":q.type==="truefalse"?"判断题":"填空题"}${practice.mode==="daily"?" · 今日新题":practice.mode==="review"?" · 到期复习":practice.mode==="learning"?" · 学习中":""}</span><span><span class="study-timer">⏱ <span id="qTimer">00:00</span></span> ${practice.pos+1}/${practice.queue.length}</span></div>
+      <div class="progress" style="margin-bottom:15px"><div style="width:${progress}%"></div></div>
+      <h2 class="qtitle">${q.q}</h2>
+      ${input}
+      ${answer}
+      <div class="qactions">
+        <button class="ghost" onclick="prevQuestion()" ${practice.pos===0?"disabled":""}>上一题</button>
+        <button class="${done?'primary':'ghost'}" onclick="nextQuestion()" ${practice.pos===practice.queue.length-1&&!done?"disabled":""}>${done?"我懂了，下一题":"下一题"}</button>
+      </div>
+    </div>
+  `,"practice");
+  if(!studySessionStartedAt)startStudySession();
+  const te=document.getElementById("qTimer");if(te)te.textContent=fmtSec(currentSessionSeconds());
+  if(scrollToAnalysis){
+    setTimeout(()=>document.getElementById("analysisStart")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
+  }
+}
+function wrongView(){
+  const list=questions.filter(q=>state.wrongIds.includes(q.id));
+  app.innerHTML=shell(`
+    <div class="section-title"><h2>错题本</h2><span>${list.length} 题</span></div>
+    ${list.length?`<div class="list">${list.map(q=>`
+      <div class="wrong-card">
+        <span class="tag">${q.tag}</span>
+        <h4>第 ${q.id} 题 · ${q.q}</h4>
+        <div class="mini">${q.memory}</div>
+      </div>`).join("")}</div>
+      <button class="primary" style="width:100%;margin-top:14px" onclick="startPractice('wrong')">开始错题强化</button>`
+      :`<div class="card empty">目前没有错题。连续两次答对一道错题后，它会自动移出错题本。</div>`}
+  `,"wrong");
+}
+function statsView(){
+  const mastered=state.masteredIds.length;
+  const answered=Object.keys(state.answers).length;
+  const due=dueReviewIds().length,learning=learningIds().length,active=activeReviewCount(),mature=longTermMasteredCount();
+  const tagMap={};
+  questions.forEach(q=>{
+    const a=state.answers[q.id];
+    if(!tagMap[q.tag])tagMap[q.tag]={total:0,correct:0};
+    if(a){tagMap[q.tag].total++;if(a.correct)tagMap[q.tag].correct++;}
+  });
+  const tags=Object.entries(tagMap).filter(([k,v])=>v.total).sort((a,b)=>(a[1].correct/a[1].total)-(b[1].correct/b[1].total));
+  app.innerHTML=shell(`
+    <div class="grid2">
+      <div class="metric"><b>${state.stats.total}</b><span>累计作答</span></div>
+      <div class="metric"><b>${accuracy()}%</b><span>累计正确率</span></div>
+      <div class="metric"><b>${answered}/${questions.length}</b><span>已接触题目</span></div>
+      <div class="metric"><b>${mastered}</b><span>错题重新掌握</span></div>
+    </div>
+    <div class="section-title"><h2>记忆曲线状态</h2><span>1·3·7·14·30·60</span></div>
+    <div class="memory-grid">
+      <div class="memory-stat"><b>${due}</b><span>今日到期</span></div>
+      <div class="memory-stat"><b>${learning}</b><span>学习中</span></div>
+      <div class="memory-stat"><b>${active}</b><span>曲线进行中</span></div>
+    </div>
+    <div class="card" style="margin-top:10px"><b>长期周期完成：${mature} 题</b><p class="mini">复习节点答错会重新进入学习阶段，并从新的完成日期重新开始第 1 天。</p></div>
+    <div class="section-title"><h2>知识点表现</h2><span>按当前记录</span></div>
+    <div class="list">
+      ${tags.length?tags.map(([tag,v])=>{
+        const p=Math.round(v.correct/v.total*100);
+        return `<div class="card"><div style="display:flex;justify-content:space-between"><b>${tag}</b><span class="mini">${p}%</span></div><div class="progress"><div style="width:${p}%"></div></div></div>`;
+      }).join(""):`<div class="card empty">先完成几道题，这里会显示薄弱知识点。</div>`}
+    </div>
+    <div class="section-title"><h2>数据状态</h2><span>固定网页版</span></div>
+    <div class="card"><b>当前记录：${Object.keys(state.memory||{}).length} 道题</b><p class="mini">最后保存：${state.lastSavedAt?new Date(state.lastSavedAt).toLocaleString():"尚未在固定网页保存"}<br>以后始终使用同一个网址，更新题库不会更换存储空间。</p></div>
+    <div class="section-title"><h2>数据备份</h2><span>含记忆曲线进度</span></div>
+    <div class="card">
+      <div class="backup-actions">
+        <button class="primary" onclick="exportBackup()">导出备份</button>
+        <button class="ghost" onclick="importBackup()">导入备份</button>
+      </div>
+    </div>
+    <button class="ghost" style="width:100%;margin-top:16px" onclick="resetData()">清空学习记录</button>
+  `,"stats");
+}
+function resetData(){
+  if(confirm("确定清空所有答题记录、错题、统计和记忆曲线进度吗？")){
+    state=defaultState();save();toast("已清空");statsView();
+  }
+}
+async function installApp(){
+  if(!deferredPrompt){toast("请使用浏览器的“添加到主屏幕”");return;}
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt=null;
+  home();
+}
+window.addEventListener("beforeinstallprompt",e=>{
+  e.preventDefault();deferredPrompt=e;
+  if(view==="home")home();
+});
+window.addEventListener("appinstalled",()=>{deferredPrompt=null;toast("已安装到桌面");});
+
+async function init(){
+  if(window.__EMBEDDED_QUESTIONS__){
+    questions=window.__EMBEDDED_QUESTIONS__;
+  }else{
+    try{
+      const r=await fetch("questions.json");
+      questions=await r.json();
+    }catch(e){
+      app.innerHTML=`<div class="app-shell"><div class="card" style="margin-top:30px">题库加载失败。</div></div>`;
+      return;
+    }
+  }
+  migrateMemory();
+  home();
+}
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&studySessionStartedAt)saveStudySession()});
+window.addEventListener("pagehide",()=>{if(studySessionStartedAt)saveStudySession()});
+init();
+</script>
+</body>
+</html>
