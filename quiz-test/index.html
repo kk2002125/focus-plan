@@ -199,7 +199,7 @@ function nav(active){
 function shell(content, active="home", action=""){
   return `<div class="app-shell">
     <div class="topbar"><div class="toprow">
-      <div class="brand"><div class="logo">题</div><span>理解型刷题 <small style="font-size:12px;color:#7b8780;font-weight:600">Web v1.5.3</small></span></div>
+      <div class="brand"><div class="logo">题</div><span>理解型刷题 <small style="font-size:12px;color:#7b8780;font-weight:600">Web v1.5.4</small></span></div>
       ${action}
     </div></div>
     <main class="content">${content}</main>${nav(active)}
@@ -211,6 +211,31 @@ function accuracy(){
 function chapterProgress(){
   const done = questions.filter(q=>state.answers[q.id]).length;
   return Math.round(done/questions.length*100)||0;
+}
+function chapterList(){
+  return [...new Set(questions.map(q=>q.chapter))];
+}
+function chapterProgressFor(chapter){
+  const list=questions.filter(q=>q.chapter===chapter);
+  if(!list.length)return 0;
+  const done=list.filter(q=>state.answers[q.id]).length;
+  return Math.round(done/list.length*100)||0;
+}
+function chapterCardsHTML(){
+  return chapterList().map((chapter,idx)=>{
+    const count=questions.filter(q=>q.chapter===chapter).length;
+    const progress=chapterProgressFor(chapter);
+    const safe=chapter.replace(/\\/g,"\\\\").replace(/'/g,"\\'");
+    return `<div class="card chapter-card" style="margin-bottom:10px">
+      <div class="chapter-icon">${String(idx+1).padStart(2,"0")}</div>
+      <div class="chapter-info">
+        <h3>${chapter}</h3>
+        <p>${count} 题 · 含原理解析</p>
+        <div class="progress"><div style="width:${progress}%"></div></div>
+      </div>
+      <button class="ghost" onclick="startPractice('chapter',null,'${safe}')">本章练习</button>
+    </div>`;
+  }).join("");
 }
 
 const REVIEW_DAYS=[1,3,7,14,30,60];
@@ -421,15 +446,7 @@ function home(){
     </div>
 
     <div class="section-title"><h2>章节题库</h2><span>${chapterProgress()}% 已接触</span></div>
-    <div class="card chapter-card">
-      <div class="chapter-icon">01</div>
-      <div class="chapter-info">
-        <h3>第一章《绪论》</h3>
-        <p>${questions.length} 题 · 选择 + 填空 · 含原理解析</p>
-        <div class="progress"><div style="width:${chapterProgress()}%"></div></div>
-      </div>
-      <button class="ghost" onclick="startPractice('continue')">整章练习</button>
-    </div>
+    ${chapterCardsHTML()}
 
     <div class="section-title"><h2>专项模式</h2><span>按需要选择</span></div>
     <div class="grid2">
@@ -459,9 +476,12 @@ function home(){
     ${!deferredPrompt?`<div class="install-tip">建议部署到固定 HTTPS 地址后长期使用，并定期导出备份。记忆曲线数据保存在浏览器本地，清理网站数据会清空记录。</div>`:""}
   `,"home",installBtn);
 }
-function startPractice(mode,limit=null){
+function startPractice(mode,limit=null,chapter=null){
   let ids=[];
-  if(mode==="review"){
+  if(mode==="chapter"){
+    ids=questions.filter(q=>q.chapter===chapter).map(q=>q.id);
+    if(!ids.length){toast("本章暂时没有题目");return;}
+  }else if(mode==="review"){
     ids=dueReviewIds();
     if(!ids.length){toast("今天没有到期复习题");return;}
   }else if(mode==="learning"){
@@ -675,7 +695,7 @@ function renderPractice(scrollToAnalysis=false){
   }
   app.innerHTML=shell(`
     <div class="card">
-      <div class="qhead"><span>${q.chapter} · ${q.type==="choice"?"单选题":q.type==="truefalse"?"判断题":"填空题"}${practice.mode==="daily"?" · 今日新题":practice.mode==="review"?" · 到期复习":practice.mode==="learning"?" · 学习中":""}</span><span><span class="study-timer">⏱ <span id="qTimer">00:00</span></span> ${practice.pos+1}/${practice.queue.length}</span></div>
+      <div class="qhead"><span>${q.chapter} · ${q.type==="choice"?"单选题":q.type==="truefalse"?"判断题":"填空题"}${practice.mode==="daily"?" · 今日新题":practice.mode==="review"?" · 到期复习":practice.mode==="learning"?" · 学习中":practice.mode==="chapter"?" · 本章练习":""}</span><span><span class="study-timer">⏱ <span id="qTimer">00:00</span></span> ${practice.pos+1}/${practice.queue.length}</span></div>
       <div class="progress" style="margin-bottom:15px"><div style="width:${progress}%"></div></div>
       <h2 class="qtitle">${q.q}</h2>
       ${input}
