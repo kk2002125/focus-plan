@@ -1,0 +1,4026 @@
+[
+  {
+    "id": 1,
+    "chapter": "第一章《绪论》",
+    "q": "基尔霍夫电压定律适用于对（ ）列电压方程。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 2,
+    "chapter": "第一章《绪论》",
+    "q": "理想变压器主要特性不包括（ ）。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 3,
+    "chapter": "第一章《绪论》",
+    "q": "正弦稳态电路中，R、L 和 C 串联，它们的电压有效值分别为 4V、3V 和 6V，则它们串联的总电压有效值为（ ）。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 4,
+    "chapter": "第一章《绪论》",
+    "q": "对于一个具有 n 个节点、b 条支路的连通电路来说，可以列出独立的 KCL 方程的数目是（ ）。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 5,
+    "chapter": "第一章《绪论》",
+    "q": "在正弦稳态 RLC 串联电路发生谐振后，当 ω 增加时，电路呈现（ ）。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 6,
+    "chapter": "第一章《绪论》",
+    "q": "当实际电流源开路时，该电流源内部（ ）。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 7,
+    "chapter": "第一章《绪论》",
+    "q": "在换路瞬间，下列说法中正确的是（ ）。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 8,
+    "chapter": "第一章《绪论》",
+    "q": "换路定则的本质是遵循（ ）。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 9,
+    "chapter": "第一章《绪论》",
+    "q": "为了从信号中提取高频部分，应选用（ ）。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 10,
+    "chapter": "第一章《绪论》",
+    "q": "为防止 50Hz 电网电压干扰混入信号之中，应选用（ ）。",
+    "studyKind": "understand",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 11,
+    "chapter": "第一章《绪论》",
+    "q": "为获取信号中的直流成分，应选用（ ）。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 12,
+    "chapter": "第一章《绪论》",
+    "q": "收音机用于选台的滤波器应为（ ）。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 13,
+    "chapter": "第一章《绪论》",
+    "q": "下列关于滞回比较器的说法，不正确的是（ ）。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 14,
+    "chapter": "第一章《绪论》",
+    "q": "自然界的各种物理量必须首先经过 ______ 将非电量转换为电量，即 ______。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 15,
+    "chapter": "第一章《绪论》",
+    "q": "信号在频域中表示的图形或曲线称为信号的 ______。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 16,
+    "chapter": "第一章《绪论》",
+    "q": "通过傅立叶变换可以实现信号从 ______ 到频域的变换。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 17,
+    "chapter": "第一章《绪论》",
+    "q": "各种信号各频率分量的 ______ 随角频率变化的分布，称为该信号的幅度频谱。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 18,
+    "chapter": "第一章《绪论》",
+    "q": "各种信号各频率分量的 ______ 随角频率变化的分布，称为该信号的相位频谱。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 19,
+    "chapter": "第一章《绪论》",
+    "q": "周期信号的频谱都由 ______、______以及______组成。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 20,
+    "chapter": "第一章《绪论》",
+    "q": "在时间上和幅值上均是连续的信号 ______。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 21,
+    "chapter": "第一章《绪论》",
+    "q": "在时间上和幅值上均是离散的信号 ______。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 22,
+    "chapter": "第一章《绪论》",
+    "q": "放大电路分为 ______、______、______以及______四类。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 23,
+    "chapter": "第一章《绪论》",
+    "q": "______、______、______、______和______等主要性能指标是衡量放大电路的标准。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 24,
+    "chapter": "第一章《绪论》",
+    "q": "放大电路的增益实际上反映了______的能力。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 25,
+    "chapter": "第一章《绪论》",
+    "q": "放大电路的电压增益和电流增益在工程上常用“分贝”表示，其表达式分别是 ______、______。",
+    "studyKind": "memory",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 26,
+    "chapter": "第一章《绪论》",
+    "q": "放大电路的频率响应指的是，在输入正弦信号情况下，输出随______的稳态响应。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 27,
+    "chapter": "第一章《绪论》",
+    "q": "幅频响应是指______之间的关系。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 28,
+    "chapter": "第一章《绪论》",
+    "q": "相频响应是指______之间的关系。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 29,
+    "chapter": "第一章《绪论》",
+    "q": "在一阶电路中，时间常数的大小不影响电路过渡过程持续的时间。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 30,
+    "chapter": "第一章《绪论》",
+    "q": "三要素法可以计算一阶电路中各处的电压和电流。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 31,
+    "chapter": "第一章《绪论》",
+    "q": "当两个线圈的耦合系数等于1时为全耦合。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 32,
+    "chapter": "第一章《绪论》",
+    "q": "无源线性二端口无论是否对称，Z参数中只有2个参数是独立的。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 33,
+    "chapter": "第一章《绪论》",
+    "q": "非正弦周期量的有效值等于它各次谐波有效值之和。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 34,
+    "chapter": "第一章《绪论》",
+    "q": "对称三相电路中，线电压与相电压相等。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 35,
+    "chapter": "第一章《绪论》",
+    "q": "空心变压器副边如接感性负载，则反映到原边的引入电抗一定呈容性。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 36,
+    "chapter": "第一章《绪论》",
+    "q": "叠加定理只适用于线性电路求电压和电流，不适用于求功率。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 37,
+    "chapter": "第一章《绪论》",
+    "q": "网络函数仅与网络的结构和参数有关，与激励的函数形式无关。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 38,
+    "chapter": "第一章《绪论》",
+    "q": "当两互感线圈的电流同时流出同名端时，两个电流所产生的磁场是互相削弱的。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 39,
+    "chapter": "第一章《绪论》",
+    "q": "有效值、角频率和初相位称为正弦量的三要素。",
+    "studyKind": "memory",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 40,
+    "chapter": "第一章《绪论》",
+    "q": "电压、电流的参考方向可任意指定，指定的参考方向不同，不影响问题最后的结论。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 41,
+    "chapter": "第一章《绪论》",
+    "q": "在使用节点电压法对电路做分析时，与电流源串联的电阻不计入自电导或互电导。",
+    "studyKind": "understand",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 42,
+    "chapter": "第一章《绪论》",
+    "q": "一个实际的电感线圈，在任何情况下呈现的电特性都是感性的。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 43,
+    "chapter": "第一章《绪论》",
+    "q": "某感性负载，电压的初相位一定小于电流的初相位，即U滞后于I。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 44,
+    "chapter": "第一章《绪论》",
+    "q": "中线的作用就是使不对称Y接负载的端电压保持对称。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 45,
+    "chapter": "第一章《绪论》",
+    "q": "负载作星形连接时，必有线电流等于相电流。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 46,
+    "chapter": "第一章《绪论》",
+    "q": "两个串联互感线圈的感应电压极性，取决于电流流向，与同名端无关。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 47,
+    "chapter": "第一章《绪论》",
+    "q": "不同频率的电压和电流不能构成平均功率，也不能构成瞬时功率。",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 48,
+    "chapter": "第一章《绪论》",
+    "q": "网络函数分母部分多项式等于零的根，称为网络函数的极点，它恰好为网络的固有频率。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 49,
+    "chapter": "第一章《绪论》",
+    "q": "网络函数的原函数即为该电路的单位冲激响应。",
+    "studyKind": "memory",
+    "topic": "电路定律与分析方法",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 50,
+    "chapter": "第二章《运算放大器》",
+    "q": "为了工作在线性工作区，应使集成运放电路处于（ ）状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 51,
+    "chapter": "第二章《运算放大器》",
+    "q": "为了工作在非线性区，应使集成运放电路处于（ ）状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 52,
+    "chapter": "第二章《运算放大器》",
+    "q": "关于理想集成运放的输入电阻和输出电阻论述正确的是（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 53,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运算放大器能处理（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 54,
+    "chapter": "第二章《运算放大器》",
+    "q": "为使电路输入电阻高、输出电阻低，应引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 55,
+    "chapter": "第二章《运算放大器》",
+    "q": "在由运放组成的电路中，运放工作在非线性状态的电路是（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 56,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运放工作在线性放大区，由理想工作条件得出两个重要规律是（ ）",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 57,
+    "chapter": "第二章《运算放大器》",
+    "q": "分析集成运放的非线性应用电路时，不能使用的概念是（ ）",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 58,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运放的线性应用存在（ ）现象。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 59,
+    "chapter": "第二章《运算放大器》",
+    "q": "非线性应用存在（ ）现象。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 60,
+    "chapter": "第二章《运算放大器》",
+    "q": "理想运放的两个重要结论是（ ）",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 61,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运放一般分为两个工作区，它们分别是（ ）",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 62,
+    "chapter": "第二章《运算放大器》",
+    "q": "有两个空载放大倍数相同，输入和输出电阻不同的放大器甲和乙，对同一信号源进行放大，在负载开路的情况下，测得甲的输出电压小，这说明甲的（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 63,
+    "chapter": "第二章《运算放大器》",
+    "q": "理想运算放大器的性能参数均被理想化，即输入电阻为 ______，输出电阻为 ______，开环电压增益为 ______，输出电压为 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 64,
+    "chapter": "第二章《运算放大器》",
+    "q": "运算放大器有两个工作区。在 ______ 区工作时，放大器放大小信号；当输入为大信号时，它工作在 ______ 区，输出电压扩展到 ______。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 65,
+    "chapter": "第二章《运算放大器》",
+    "q": "运算放大器工作在线性区时，具有 ______ 和 ______ 两个特点，凡是线性电路都可以利用这两个概念来分析电路的输入、输出关系。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 66,
+    "chapter": "第二章《运算放大器》",
+    "q": "反相比例运算电路中集成运放反相输入端为 ______ 点，而同相比例运算电路中集成运放两个输入端对地的电压基本上 ______。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 67,
+    "chapter": "第二章《运算放大器》",
+    "q": "______ 比例运算电路的输入电流等于零，而 ______ 比例运算电路的输入电流等于流过反馈电阻的电流。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 68,
+    "chapter": "第二章《运算放大器》",
+    "q": "______ 运算电路的电压增益 Au≥1；______ 运算电路的电压增益 Au<0。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 69,
+    "chapter": "第二章《运算放大器》",
+    "q": "反相求和运算电路中集成运放的反相输入端为虚地点，流过反馈电阻的电流等于各输入端电流的 ______。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 70,
+    "chapter": "第二章《运算放大器》",
+    "q": "______ 比例运算电路的输入电阻大，而 ______ 比例运算电路的输入电阻小。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 71,
+    "chapter": "第二章《运算放大器》",
+    "q": "______ 运算电路可实现函数 Y=aX1+bX2+cX3，a、b 和 c 均小于零。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 72,
+    "chapter": "第二章《运算放大器》",
+    "q": "______ 运算电路可将三角波电压转换成方波电压；______ 运算电路可将方波电压转换成三角波电压。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 73,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运算放大器工作在线性区时，两输入端的电位可以近似为 U+ ______ U−。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 74,
+    "chapter": "第二章《运算放大器》",
+    "q": "理想运算放大器的“虚短”和“虚断”的概念，就是流进运放的电流为 ______，两个输入端的电压为 ______，为保证运放工作在线性状态，必须引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 75,
+    "chapter": "第二章《运算放大器》",
+    "q": "为了工作在线性工作区，应使集成运放电路处于 ______ 状态；为了工作在非线性区，应使集成运放电路处于 ______ 状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 76,
+    "chapter": "第二章《运算放大器》",
+    "q": "输入电阻很大的运算电路是 ______ 比例运算放大器，电路中引入的是 ______ 负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 77,
+    "chapter": "第二章《运算放大器》",
+    "q": "电压比较器中的集成运放通常工作在 ______ 区，电路工作在 ______ 状态或引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 78,
+    "chapter": "第二章《运算放大器》",
+    "q": "在模拟运算电路时，集成运算放大器工作在 ______ 区，而在比较器电路中，集成运算放大器工作在 ______ 区。",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 79,
+    "chapter": "第二章《运算放大器》",
+    "q": "过零比较器可将正弦波变为 ______ 波，积分器可将方波变为 ______ 波。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 80,
+    "chapter": "第二章《运算放大器》",
+    "q": "在运算电路中，同相输入端和反相输入端均为“虚地”。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 81,
+    "chapter": "第二章《运算放大器》",
+    "q": "运算电路中一般均引入负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 82,
+    "chapter": "第二章《运算放大器》",
+    "q": "电压比较器的阈值电压是使集成运放同相输入端电位和反相输入端电位相等的输入电压。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 83,
+    "chapter": "第二章《运算放大器》",
+    "q": "电压比较器电路中集成运放的净输入电流为零。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 84,
+    "chapter": "第二章《运算放大器》",
+    "q": "集成运放在开环情况下，一定工作在非线性区。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 85,
+    "chapter": "第二章《运算放大器》",
+    "q": "当集成运放工作在非线性区时，输出电压不是高电平，就是低电平。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 86,
+    "chapter": "第二章《运算放大器》",
+    "q": "一般情况下，在电压比较器中，集成运放不是工作在开环状态，就是仅仅引入了正反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 87,
+    "chapter": "第二章《运算放大器》",
+    "q": "凡是运算电路都可以利用“虚短”和“虚断”的概念求解运算关系。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 88,
+    "chapter": "第二章《运算放大器》",
+    "q": "电压比较器的阈值电压是使集成运放同相输入端电位和反相输入端电位相等的输入电压。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 89,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "发光二极管正常工作时，外加（ ）电压。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 90,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "光电二极管正常工作时，外加（ ）电压。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 91,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "某只硅稳压管的稳定电压 VZ=4V，其两端施加的电压分别为 +5V（正向偏置）和 -5V（反向偏置）时，稳压管两端的最终电压分别为（ ）",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 92,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当环境温度升高时，二极管的反向饱和电流 IS 将增大，这是因为此时 PN 结内部的（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 93,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "用万用表测二极管的正、反向电阻来判断二极管的好坏，好的管子应为（ ）",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 94,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "二极管的伏安特性曲线的正向部分在环境温度升高时将（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 95,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当外加偏置电压不变时，若工作温度升高，二极管的正向导通电流将（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 96,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "半导体中的空穴和自由电子数相等，这样的半导体称为（ ）",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 97,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "P型半导体是在本征半导体中加入微量的（ ）价元素构成的。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 98,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "P型半导体中的多数载流子是（ ）",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 99,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "N型半导体中的多数载流子是（ ）",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 100,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "在本征半导体中掺入微量的（ ）价元素，形成N型半导体。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 101,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "在P型半导体中，自由电子浓度（ ）空穴浓度。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 102,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "本征半导体温度升高以后，（ ）",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 103,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "空间电荷区是由（ ）构成的。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 104,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "PN结加正向电压时，空间电荷区将（ ）",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 105,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "稳压管的稳压区是其工作在（ ）",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 106,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当晶体管工作在放大区时，发射结电压和集电结电压应为（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 107,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当温度升高时，二极管的反向饱和电流将（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 108,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "在N型半导体中，多数载流子是 ______；在P型半导体中，多数载流子是 ______。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 109,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "利用二极管的 ______ 组成整流电路。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 110,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "P型半导体是在本征半导体中加入 ______ 后形成的杂质半导体。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 111,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "温度升高后，本征半导体中 ______ 和 ______ 数目都增多，且增量相同。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 112,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当PN结外加正向电压时，P区接电源 ______ 极，N区接电源 ______ 极，此时，扩散电流 ______ 漂移电流。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 113,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "二极管最主要的特性是 ______。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 114,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "N型半导体是在本征半导体中加入 ______ 后形成的杂质半导体。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 115,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "用万用表测量二极管极性时，已知万用表的黑表笔为电源正极，红表笔为电源负极，若测得的二极管为合格产品，则红表笔所接一端为二极管的 ______ 极，黑表笔所接一端为二极管的 ______ 极。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 116,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "温度升高后，本征半导体内 ______ 和 ______ 数目都增多，且增量相等。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 117,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "制作电子器件的常用材料主要采用 ______。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 118,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "本征半导体是指 ______。P型半导体中的少子是 ______，多子是 ______；N型半导体中的少子是 ______，多子是 ______。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 119,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "当环境温度升高时，二极管的反向饱和电流 IS 将增大，这是因为此时 PN 结内部的 ______。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 120,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "硅管的正向导通电压约为 ______ V，锗管的正向导通电压约为 ______ V。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 121,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "稳压管是一种 ______ 二极管。除了用于限幅电路之外，主要用于稳压电路，其稳压性体现在电流增量 ______，只引起很小的 ______ 变化，此时稳压管应工作于 ______ 区。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 122,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "发光二极管正常工作时，外加 ______ 电压；而光电二极管正常工作时，外加 ______ 电压。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 123,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "PN结的结电容包括 ______ 和 ______。当在PN结两端施加正向电压时，空间电荷区将 ______，______ 电容将增大。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 124,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "发光二极管是将 ______ 的器件；而光电二极管是将 ______ 的器件。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 125,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "N型半导体又称为空穴型半导体。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 126,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "P型半导体中，多数载流子是空穴，少数载流子是电子。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 127,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "二极管具有单向导电特性。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 128,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "发光二极管加正向电压导通时的压降为0.7V。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 129,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "光敏二极管正常工作时应处于反向偏置状态。",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 130,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "用万用表 R×1kΩ 挡测量一只二极管，其正反向电阻都为∞，则这只二极管的内部已断路。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 131,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "用万用表 R×100Ω 挡测量一只二极管，其正反向电阻都呈现出很小的阻值，则这只二极管的PN结已经被烧坏而短路。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 132,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "光敏性、热敏性和掺杂性是半导体的独特性能。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 133,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "纯净半导体中掺入三价杂质元素可得到N型半导体。",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 134,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "PN结正向电流的大小由温度决定。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 135,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "PN结内的扩散电流是载流子的电场力作用下形成的。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 136,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "因为N型半导体的多子是自由电子，所以它带负电。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 137,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "PN结在无光照、无外加电压时，结电流为零。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 138,
+    "chapter": "第三章《二极管及其基本电路》",
+    "q": "因为N型半导体的多子是自由电子，所以它带负电。",
+    "studyKind": "understand",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 139,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管起放大作用时应工作在漏极特性的（ ）",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 140,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "增强型绝缘栅场效应管，当栅极g与源极s之间电压为零时（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 141,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管用（ ）控制漏极电流。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 142,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管漏极电流由（ ）的漂移运动形成。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 143,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "N沟道场效应管的漏极电流由（ ）的漂移运动形成。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 144,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在共源、共漏和共栅三种放大电路组态中，（ ）电压增益小于1但接近于1，输入输出电压同相，有电压跟随作用。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 145,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在共源、共漏和共栅三种放大电路组态中，（ ）电压增益较高，输入输出电压反相。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 146,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在共源、共漏和共栅三种放大电路组态中，（ ）电压增益较高，输入输出电压同相，有电流跟随作用。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 147,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在共源、共漏和共栅三种放大电路组态中，（ ）输出电阻低。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 148,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在共源、共漏和共栅三种放大电路组态中，（ ）输入电阻小。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 149,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应晶体管是用（ ）控制漏极电流的。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 150,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "结型场效应管发生预夹断后，管子（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 151,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管靠（ ）导电。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 152,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "增强型PMOS管的开启电压（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 153,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "增强型NMOS管的开启电压（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 154,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "分压式电路中的栅极电阻RG一般阻值很大，目的是（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 155,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "源极跟随器（共漏极放大器）的输出电阻与（ ）有关。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 156,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "某场效应管的IDSS为6mA，而IDQ自漏极流出，大小为8mA，则该管是（ ）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 157,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应晶体管属于 ______ 控制器件。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 158,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管的最大优点是 ______。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 159,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "UGS=0时，不能工作在恒流区的场效应管有 ______。",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 160,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "开启电压UGS(th)>0的是 ______ 场效应管。（原图符号较模糊，按本章标准对应关系录入）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 161,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "开启电压UGS(th)<0的是 ______ 场效应管。（原图符号较模糊，按本章标准对应关系录入）",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 162,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "FET有两种主要类型即 ______ 和 ______，FET是利用 ______ 来控制其电流大小的半导体器件。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 163,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "在MOSFET中，从导电载流子的带电极性来看，有 ______ 管和 ______ 管之分；而按照导电沟道形成机理不同，NMOS管和PMOS管又各有 ______ 型和 ______ 型两种。因此，MOSFET有四种：______、______、______ 和 ______。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 164,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "结型场效应管发生预夹断后，管子将进入 ______ 区工作。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 165,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "增强型PMOS管的开启电压 ______。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 166,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "当场效应管的漏极直流电流ID从2mA变为4mA时，它的低频跨导gm将 ______。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 167,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "当UGS=0V时，能够工作在恒流区的场效应管有 ______、______。",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 168,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "MOS管的结构由 ______、______ 和 ______ 组成。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 169,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "绝缘栅型场效应管按导电沟道的分有 ______ 和 ______ 两类，其每一类又可分 ______ 和 ______ 两种。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 170,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管与双极晶体管比较，______ 为电压控制器件，______ 为电流控制器件，______ 的输入电阻高。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 171,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "场效应管有 ______ 种载流子参与导电，故场效应管又称 ______ 型元件。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 172,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "使用场效应管时应特别注意对 ______ 极的保护，尤其是绝缘栅管，在不用时应将三个电极 ______。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 173,
+    "chapter": "第四章《场效应晶体管及其放大电路》",
+    "q": "自偏压电路只适用于 ______ 型的场效应管放大电路。",
+    "studyKind": "understand",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 174,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "分压式偏置的NPN型晶体管共发射极放大电路中，UB点电位过高，晶体管易出现（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 175,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "晶体管放大电路中，基极电流iB的数值较大时，易引起静态工作点Q接近（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 176,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "NPN型晶体放大电路中，晶体管各级电位最高的是（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 177,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "射极输出器的输出电阻小，说明该电路的（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 178,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在三极管的输出特性曲线中，每一条曲线与（ ）对应。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 179,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "为了增大放大电路的动态范围，其静态工作点应选择（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 180,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在晶体管放大电路中，当集电极电流增大时，将使晶体管（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 181,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "已知某晶体管为硅管，则该管饱和时的饱和压降UCES为（ ）",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 182,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "存在交越失真的功率放大电路是（ ）",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 183,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "集成运算放大电路是一个（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 184,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在NPN型三极管放大电路中测得发射结为正向偏置，集电结为正向偏置，则此管的工作状态为（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 185,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "测得某放大电路中三极管的三个管脚1、2、3对公共端的电位分别为5V、2.7V和2V，则管脚1、2、3的三个极依次是（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 186,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "射极输出器的电压放大倍数为（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 187,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "测得NPN型三极管上各电极对地电位分别为UE=2.1V，UB=2.8V，UC=2.6V，此三极管处在（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 188,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "发光二极管的正常工作状态是（ ）",
+    "studyKind": "memory",
+    "topic": "半导体、PN结与二极管",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 189,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共发射极放大电路可把电流放大转换成电压放大的元件是（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 190,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "当晶体管工作在放大区时，发射结电压和集电结电压应为（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 191,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "工作在放大区的某三极管，如果当IB从12μA增大到22μA时，IC从1mA变为2mA，那么它的β约为（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 192,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "基本共射放大电路中，基极电阻Rb的作用是（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 193,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "基本共射放大电路中，集电极电阻RC的作用是（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 194,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "基本共射放大电路中，输入正弦信号，现用示波器观察输出电压uo和晶体管集电极电压uc的波形，二者相位（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 195,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "NPN管基本共射放大电路输出电压出现了非线性失真，通过减小Rb失真消除，这种失真一定是（ ）失真。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 196,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "分压式偏置工作点稳定电路，当β=50时，IB=20μA，IC=1mA。若只更换β=100的晶体管，而其他参数不变，则IB和IC分别是（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 197,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路的三种组态（ ）",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 198,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "晶体管处于放大状态时，发射结____，集电结____（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 199,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在共射基本放大电路中，适当增大RC，电压放大倍数和输出电阻将有何变化（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 200,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "晶体管有三个工作区，下面哪一项不是（ ）",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 201,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "基本放大电路中，经过晶体管的信号有（ ）",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 202,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共发射极放大电路的反馈元件是（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 203,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在两级放大电路中，已知Au1=20，Au2=30，则总电压放大倍数为（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 204,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某晶体管的发射极电流等于1mA，基极电流等于20μA，则它的集电极电流等于（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 205,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "工作在放大区域的某晶体管，当IB从20μA增大到40μA时，IC从1mA变为2mA则它的β值约为（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 206,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "图示复合管的等效类型为（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 207,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "关于三极管反向击穿电压的关系，下列正确的是（ ）",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 208,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某三极管的PCM=100mW，ICM=20mA，U(BR)CEO=15V，则下列状态下三极管能正常工作的是（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 209,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路如图所示，已知硅三极管的β=50，则该电路中三极管的工作状态为（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 210,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "（ ）具有不同的低频小信号电路模型。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 211,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "（ ）情况下，可以用H参数小信号模型分析BJT放大电路。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 212,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "硅NPN三极管放大电路中，静态时测得集-射极之间直流电压UCE=0.3V，则此时三极管工作于（ ）状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 213,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在三极管放大电路中，下列等式不正确的是（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 214,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管当发射结和集电结都正偏时工作于（ ）状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 215,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "温度升高后，（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 216,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管工作截止区时，（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 217,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管工作在放大状态时（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 218,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管有三种连接组态，其中高频特性最好的是（ ）组态。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 219,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管有三种连接组态，其中同相放大的组态是（ ）组态。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 220,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "关于BJT放大电路中的静态工作点（简称Q点），下列说法中不正确的是（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 221,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "对恒流源而言，下列说法不正确的为（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 222,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共射放大电路的静态工作点Q过高，（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 223,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共射放大电路的静态工作点Q过低，（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 224,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某放大电路在负载开路时的输出电压4V，接入12kΩ的负载电阻后，输出电压降为3V，这说明放大电路的输出电阻为（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 225,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "为了使高内阻信号源与低阻负载能很好地配合，可以在信号源与低阻负载间接入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 226,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "测得放大电路中的晶体三极管各电极对地电压为：VB=2.7V，VE=2V，VC=6V，则该晶体三极管为（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 227,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某晶体三极管的IE=1mA，IB=20μA，则IC=（ ）mA。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 228,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "如图所示复合管，已知T1的β1=30，T2的β2=50，则复合后的β约为（ ）",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 229,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某共射极放大电路空载时输出电压有截止失真，在输入信号不变的情况下，经耦合电容接上负载电阻时，失真消失，这时由于（ ）",
+    "studyKind": "understand",
+    "topic": "交流电路、变压器与互感",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 230,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某放大器输入电压为10mV时，输出电压为7V；输入电压为15mV时，输出电压为6.5V，则该放大器的电压放大倍数为（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 231,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "设图示电路工作于放大状态，当温度降低时，（ ）",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 232,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "已知两共射极放大电路空载时电压放大倍数绝对值分别为Au1和Au2，若将它们接成两级放大电路，则其放大倍数绝对值（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 233,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "复合管的优点之一是（ ）",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 234,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "为了使高阻信号源与低阻负载能很好地配合，可以在信号源与负载之间接入 ______ 组态放大电路。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 235,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "根据下图中各三极管的电位，判断它们所处的状态分别为 ______。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 236,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共集电极电路没有 ______ 放大作用。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 237,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "带射极电阻Re的共射放大电路，在Re上并联交流旁路电容Ce后，其电压放大倍数将 ______。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 238,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "为了保证三极管工作在放大区，要求：发射结 ______ 偏置，集电结 ______ 偏置。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 239,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在三极管组成的三种不同组态的放大电路中，共射和共基组态有电压放大作用，______ 组态有电流放大作用，______ 组态有倒相作用；______ 组态带负载能力强。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 240,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管实现放大的三个内部条件是 ______。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 241,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管工作在饱和区时，发射结 ______，集电结 ______；工作在截止区时，发射结 ______，集电结 ______。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 242,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "工作在放大状态的三极管，流过发射结的电流主要是 ______，流过集电结的电流主要是 ______。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 243,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "反向饱和电流是由 ______ 载流子形成，其大小与 ______ 有关，而与外加电压 ______。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 244,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "NPN型BJT工作在放大区时，其三个电极电压的关系是：______ 电压最高，______ 电压最低；而PNP型BJT三个电极电压的关系是：______ 电压最高，______ 电压最低。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 245,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT处于放大状态时，______。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 246,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "正常工作时，不能将BJT的 ______ 交换使用。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 247,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "在共射极放大电路中，信号由BJT的 ______ 输入，由BJT的 ______ 输出；在共集电极放大电路中，信号由BJT的 ______ 输入，由BJT的 ______ 输出；在共基极放大电路中，信号由BJT的 ______ 输入，由BJT的 ______ 输出。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 248,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT处于放大状态时，硅管的b-e间压差约为 ______ V；锗管的b-e间压差约为 ______ V。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 249,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT的 ______ 只能用于分析放大电路的动态情况，不能用来分析静态工作点。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 250,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT组成复合管时最重要的特性是极大地提高了 ______。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 251,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT具有放大作用是由于 ______。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 252,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT的三个电极中只能做输入的电极是 ______，只能做输出的电极是 ______。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 253,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "当NPN型共射极放大电路的输出电压时域波形顶部出现失真时，是出现了 ______ 失真；而PNP型共射极放大电路的输出电压波形顶部出现失真时，是出现了 ______ 失真。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 254,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "下列放大电路中，既有较大的电压放大倍数，又有较大的电流放大倍数的是 ______。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 255,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三种基本组态双极型三极管放大电路中，输入电阻最大的是共 ______ 极电路，输入电阻最小的是共 ______ 极电路，输出电阻最小的是共 ______ 极电路。",
+    "studyKind": "memory",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 256,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "射极输出器的主要特点是：电压放大倍数 ______，输入电阻 ______，输出电阻 ______。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 257,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "NPN管和PNP管构成放大电路时，所需的工作电压极性相 ______，但这两种管子的微变等效电路 ______。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 258,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "单级双极型三极管放大电路中，既能放大电压又能放大电流的是共 ______ 极电路，只能放大电压不能放大电流的是共 ______ 极电路，只能放大电流不能放大电压的是共 ______ 极电路。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 259,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管有 ______ 和 ______ 两种载流子参与导电，故称作 ______ 极型晶体管；而场效应管称作 ______ 极型晶体管。",
+    "studyKind": "memory",
+    "topic": "场效应管结构与工作条件",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 260,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "某处于放大状态的BJT三极管，测得三个电极的对地电位为U1=-9V，U2=-6V，U3=-6.2V，则电极 ______ 为基极，______ 为集电极，______ 为发射极，为 ______ 型管。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 261,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管电流放大系数β反映了放大电路中 ______ 极电流对 ______ 极电流的控制能力。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 262,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "饱和失真是由于静态工作点设置过 ______ 而产生的；截止失真是由于静态工作点设置过 ______ 而产生的。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 263,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "常用来稳定单管半导体三极管放大电路的工作点偏置电路是 ______。",
+    "studyKind": "memory",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 264,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "晶体三极管的发射极和集电极都反偏，则处于截止状态。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 265,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "用万用表测试晶体三极管时，选择欧姆档R×10K档位。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 266,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "无论在任何情况下，三极管都具有电流放大能力。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 267,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共射极放大电路中静态工作点过高时，输出电压的波形易出现上削波。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 268,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "共射放大电路静态工作点过低时易造成截止失真，输出电压呈上削波。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 269,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "只有电路既放大电流又放大电压，才称其有放大作用。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 270,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路中输出的电流和电压都是由有源元件提供的。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 271,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "电路中各电量的交流成份是交流信号源提供的。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 272,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路必须加上合适的直流电源才能正常工作。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 273,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "由于放大的对象是变化量，所以当输入信号为直流信号时，任何放大电路的输出都毫无变化。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 274,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "只要是共射放大电路，输出电压的底部失真都是饱和失真。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 275,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "双极型三极管由两个PN结构成，因此可以用两个二极管背靠背相连构成一个三极管。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 276,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管工作在放大区时，若iB为常数，则uCE增大时，iC几乎不变，故当三极管工作在放大区时可视为一电流源。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 277,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "极管工作在放大区时可视为一电流源。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 278,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "对三极管电路进行直流分析时，可将三极管用H参数小信号模型替代。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 279,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管的C、E两个区所用半导体材料相同，因此，可将三极管的C、E两个电极互换使用。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 280,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管的输出特性曲线随温度升高而上移，且间距随温度升高而减小。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 281,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管放大电路中的耦合电容在直流分析时可视为开路，交流分析时可视为短路。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 282,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "处于放大状态的晶体管，集电极电流是多子漂移运动形成的。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 283,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "只有电路既放大电流又放大电压，才称其有放大作用。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 284,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "根据电路放大原理可以说任何放大电路都有功率放大作用。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 285,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路中输出的电流和电压都是由有源元件提供的。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 286,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "阻容耦合多级放大电路各级的Q点相互独立，它只能放大交流信号。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 287,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT三极管有三种连接组态，其中没有密勒效应的是共射放大电路。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 288,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "FET三极管有三种连接组态，其中没有密勒效应的是共栅极放大电路。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 289,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT三极管有三种连接组态，其中没有密勒效应的是共基极放大电路。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 290,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "BJT三极管有三种连接组态，比较三种组态密勒效应最强的是共发射放大电路。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 291,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路的增益在低频区的数值比较中频区小的主要原因是耦合电容和旁路电容的影响。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 292,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路的增益在高频区的数值比较中频区小的主要原因是三极管的极间电容。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 293,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "分析BJT放大器的增益时，一般采用h参数模型。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 294,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管的输出特性曲线随温度升高而上移，且间距随温度升高而增加。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 295,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "对三极管电路进行交流分析时，可将三极管用H参数小信号模型替代。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 296,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管的C、E两个区所用半导体材料虽然相同，但是不能将三极管的C、E两个电极互换使用。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 297,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "双极型三极管和场效应管都利用输入电流的变化控制输出电流的变化而起到放大作用。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 298,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "分析三极管低频小信号放大电路时，可采用微变等效电路分析法把非线性器件等效为线性器件，从而简化计算。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 299,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管放大电路中的耦合电容在直流分析时可视为开路，交流分析时可视为短路。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 300,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "场效应管放大电路和双极型三极管放大电路的小信号等效模型相同。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 301,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "放大电路只要静态工作点合理，就可以放大电压信号。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 302,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "三极管放大电路中，设ub、ue分别表示基极和发射极的信号电位，则ub=UBEQ+ueQ。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 303,
+    "chapter": "第五章《双极型三极管（BJT）及其放大电路》",
+    "q": "双极型三极管的小信号模型中，受控电流源流向不能任意假定，它由基极电流ib的流向确定。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 304,
+    "chapter": "第六章《频率响应》",
+    "q": "测试放大电路输出电压幅值与相位的变化，可以得到它的频率响应，条件是（ ）",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 305,
+    "chapter": "第六章《频率响应》",
+    "q": "放大电路在高频信号作用时放大倍数数值下降的原因是（ ）",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 306,
+    "chapter": "第六章《频率响应》",
+    "q": "低频信号作用时放大倍数数值下降的原因是（ ）",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 307,
+    "chapter": "第六章《频率响应》",
+    "q": "某电路有用信号频率为2kHz，可选用（ ）",
+    "studyKind": "understand",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 308,
+    "chapter": "第六章《频率响应》",
+    "q": "文氏桥振荡器中的放大电路电压放大倍数（ ）才能满足起振条件。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 309,
+    "chapter": "第六章《频率响应》",
+    "q": "LC正弦波振荡器电路的振荡频率为（ ）",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 310,
+    "chapter": "第六章《频率响应》",
+    "q": "RC串并联正弦波振荡器电路的振荡频率为（ ）",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 311,
+    "chapter": "第六章《频率响应》",
+    "q": "（ ）具有不同的低频小信号电路模型。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 312,
+    "chapter": "第六章《频率响应》",
+    "q": "（ ）情况下，可以用H参数小信号模型分析BJT放大电路。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 313,
+    "chapter": "第六章《频率响应》",
+    "q": "某放大器的中频电压增益为40dB，则在上限频率fH处的电压放大倍数约为（ ）倍。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 314,
+    "chapter": "第六章《频率响应》",
+    "q": "三极管有三种连接组态，其中高频特性最好的是（ ）组态。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 315,
+    "chapter": "第六章《频率响应》",
+    "q": "多级放大电路与组成它的任何一个单级放大电路相比，通频带（ ）",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 316,
+    "chapter": "第六章《频率响应》",
+    "q": "放大电路的线性失真分为 ______ 失真和 ______ 失真。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 317,
+    "chapter": "第六章《频率响应》",
+    "q": "有用信号频率高于1000Hz，可选用 ______ 滤波器。文氏电桥振荡器中的放大电路电压放大倍数 ______ 才能满足起振条件。",
+    "studyKind": "understand",
+    "topic": "信号、频谱与基本指标",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 318,
+    "chapter": "第六章《频率响应》",
+    "q": "若信号带宽大于放大电路的通频带，则会产生 ______ 失真。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 319,
+    "chapter": "第六章《频率响应》",
+    "q": "放大电路级数增加，中频放大倍数 ______，通频带 ______。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 320,
+    "chapter": "第六章《频率响应》",
+    "q": "三种基本组态双极型三极管放大电路中，若希望源电压放大倍数大，宜选用共 ______ 极电路；若希望带负载能力强，宜选用共 ______ 极电路；若希望从信号源索取的电流小，宜选用共 ______ 极电路；若希望用作高频电压放大器，宜选用共 ______ 极电路。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 321,
+    "chapter": "第六章《频率响应》",
+    "q": "通频带越宽，表示放大电路工作的频率范围越宽，其组成的放大器质量越好。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 322,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT三极管有三种连接组态，其中没有密勒效应的是共射放大电路。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 323,
+    "chapter": "第六章《频率响应》",
+    "q": "FET三极管有三种连接组态，其中没有密勒效应的是共栅极放大电路。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 324,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT三极管有三种连接组态，其中没有密勒效应的是共基极放大电路。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 325,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT三极管有三种连接组态，比较三种组态密勒效应最强的是共发射放大电路。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 326,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT放大电路的高频响应有三个频率参数fβ、fα、fT，三者关系是fα=fT>fβ。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 327,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT放大电路的高频响应频率参数fα、fβ、fT满足fT=βfβ。",
+    "studyKind": "memory",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 328,
+    "chapter": "第六章《频率响应》",
+    "q": "放大电路的增益在低频区的数值比较中频区小的主要原因是耦合电容和旁路电容的影响。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 329,
+    "chapter": "第六章《频率响应》",
+    "q": "放大电路的增益在高频区的数值比较中频区小的主要原因是三极管的极间电容。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 330,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT放大器的低频跨导gm与共发射电流放大系数β的关系是gm=β/r'be。",
+    "studyKind": "memory",
+    "topic": "频率响应与振荡",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 331,
+    "chapter": "第六章《频率响应》",
+    "q": "BJT放大器的Cb'e电容与其低频跨导gm的关系为Cb'e=gm/(2πfT)。",
+    "studyKind": "memory",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 332,
+    "chapter": "第六章《频率响应》",
+    "q": "频率失真由于线性的电抗元件引起的，它不会产生新的频率分量，因此是一种线性失真。",
+    "studyKind": "understand",
+    "topic": "频率响应与振荡",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 333,
+    "chapter": "第六章《频率响应》",
+    "q": "分析三极管低频小信号放大电路时，可采用微变等效电路分析法把非线性器件等效为线性器件，从而简化计算。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 334,
+    "chapter": "第六章《频率响应》",
+    "q": "分析BJT放大器在高频区的增益时必须采用混合π模型，而分析BJT放大器非高频区的增益时采用h参数模型。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 335,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "通用型集成运放适用于放大（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 336,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放制造工艺使得同类半导体管的（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 337,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "为增大电压放大倍数，集成运放的中间级多采用（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 338,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放的输出级一般采用互补对称放大电路是为了（ ）",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 339,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差分放大电路由双端输入改为单端输入，则差模电压放大倍数（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 340,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "直接耦合放大电路输入级采用差分放大电路是为了（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 341,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "对于长尾式差分放大电路，在差模交流通路中，射极电阻RE可视为（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 342,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "将单端输入、双端输出的差分放大电路改接成双端输入、双端输出时，其差模放大倍数将（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 343,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "将双端输入、双端输出的差分放大电路改接成单端输入、单端输出时，其差模放大倍数将（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 344,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差分放大电路抑制零点漂移的能力是双端输出时比单端输出时（ ）",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 345,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放的线性应用电路均引入（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 346,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "下列运算电路中，属于线性应用的是（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 347,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "下列运算电路中，属于非线性应用的是（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 348,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放的主要参数中，不包括以下哪项（ ）",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 349,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差模输入信号是两个输入信号的（ ）",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 350,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差模放大倍数是指什么之比（ ）",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 410,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "如图所示理想集成运放的输出电压Uo应为（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 411,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放组成（ ）输入放大器的输入电流基本上等于流过反馈电阻的电流。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 412,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放组成（ ）输入放大器的输入电流几乎等于零。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 413,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放组成（ ）输入放大器输入电阻大。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 414,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在多个输入信号的情况下，要求各输入信号互不影响，宜采用（ ）输入方式的电路。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 415,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "如要求能放大两信号的差值，又能抑制共模信号，采用（ ）输入方式电路。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 416,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "输出量与若干个输入量之和成比例关系的电路称为（ ）",
+    "studyKind": "memory",
+    "topic": "运算电路与比较器",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 417,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "（ ）运算电路可将方波电压转换成三角波电压。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 418,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "如果要将正弦波电压移相+90°，应选用（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 419,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "欲将正弦波电压叠加上一个直流量，应选用（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 420,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "欲实现Au=-100的放大电路，应选用（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 421,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "欲将方波电压转换成三角波电压，应选用（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 422,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "欲将方波电压转换成尖顶波电压，应选用（ ）",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 423,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放放大电路调零和消振应在（ ）进行。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 424,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "相对来说，（ ）比较器抗干扰能力强。",
+    "studyKind": "memory",
+    "topic": "运算电路与比较器",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 425,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在多级放大器中，中间某一级的 ______ 电阻是上一级的负载。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 426,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放应用电路如果工作在线性放大状态，一般要引入 ______。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 427,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放中间级的作用是 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 428,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差模信号电压是两个输入信号电压 ______ 的值。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 429,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放内部第一级是 ______，因此它有两个输入端。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 430,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "一个理想的差分放大电路，只能 ______，不能放大 ______。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 351,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差分放大电路的基本功能是对差模信号的 ______ 作用和对共模信号的 ______ 作用。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 352,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放是直接耦合的 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 353,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在双端输入、单端输出的差分放大电路中，发射极电阻RE对 ______ 输入信号无影响，对 ______ 输入信号具有抑制作用。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 354,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运算放大器构成的反相比例运算电路的一个重要特点是 ______。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 355,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差动放大器由双端输入变为单端输入，差模电压增益是 ______。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 356,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "反相求和电路中集成运放的反相输入端为虚地点，流过反馈电阻的电流等于 ______。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 357,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "将二极管、晶体管或场效应管、电阻等元器件及连接导线同时制作在 ______ 上，构成一个具有某种功能的完整电路，这就是 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 358,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "零漂是指 ______。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 359,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "放大电路的输出级应有一定的带负载能力，其输出电阻要 ______，动态范围要 ______。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 360,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放内部电路通常包含四个基本组成部分，即 ______、______、______ 和 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 361,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运算放大器与分立元件放大电路相比，在电路结构上放大器之间都采用 ______ 耦合方式，这样做是因为 ______。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 362,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "为了抑制漂移，集成运算放大器的输入级一般采用 ______ 放大电路，并利用恒流源或长尾电阻引入一个共模负反馈，以提高 ______，减小 ______。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 363,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "电流源电路是模拟集成电路的基本单元电路，其特点是 ______ 小，______ 很大，并具有温度补偿作用。常作为放大电路的有源负载或为放大电路提供稳定的 ______。",
+    "studyKind": "understand",
+    "topic": "电流源与有源负载",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 364,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "共模信号是夹杂在输入信号中的需要 ______ 的信号，共模电压增益越 ______，说明放大电路的性能越好。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 365,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "共模抑制比的计算公式为 ______，它描述差分放大器对 ______ 的抑制能力。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 366,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差动放大电路具有电路结构 ______ 的特点，因此它有很强的抑制零点漂移的能力，能放大 ______ 模信号，而抑制 ______ 模信号。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 367,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "通用型集成运放适用于放大 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 368,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放制造工艺使得同类半导体管的 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 369,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "为增大电压放大倍数，集成运放的中间级多采用 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 370,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放的输出级一般采用互补对称放大电路是为了 ______。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 371,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "理想运放只能 ______，不能放大 ______。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 372,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "实际运放在开环时，输出很难调整至零电位，只有在 ______ 时才能调整至零电位。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 373,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差分放大电路中，若vi1=+40mV，vi2=+20mV，Avd=-100，Avc=-0.5，则共模输入信号vic=______，差模输入电压vid=______，输出电压vo=______。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 374,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差分放大电路，若两个输入信号uI1=uI2，则输出电压uo=______；若uI1=100μV，uI2=80μV，则差模输入电压uId=______μV，共模输入电压uIc=______μV。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 375,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在差分放大电路中，大小相等、极性或相位一致的两个输入信号称为 ______ 信号；大小相等、极性或相位相反的两个输入信号称为 ______ 信号。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 376,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "由于集成运放是直接耦合放大电路，因此只能放大直流信号，不能放大交流信号。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 377,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "理想运放只能放大差模信号，不能放大共模信号。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 378,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "不论工作在线性放大状态还是非线性状态，理想运放的反相输入端与同相输入端之间的电位差都为零。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 379,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "不论工作在线性放大状态还是非线性状态，理想运放的反相输入端与同相输入端均不从信号源索取电流。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 380,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "实际运放在开环时，输出很难调整至零电位，只有在闭环时才能调整至零电位。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 381,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "一个完全对称的差分式放大器，其共模放大倍数为零。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 382,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "一个理想的差分放大电路，只能放大差模信号，不能放大共模信号。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 383,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差动放大电路的AVD越大越好，而AVC则越小越好。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 384,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "零点漂移就是静态工作点的漂移。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 385,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "产生零点漂移的原因主要是晶体管参数受温度的影响。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 386,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "不管差分放大电路的参数是否理想对称，RE均有共模负反馈作用。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 387,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "放大电路采用复合管是为了减小输入电阻和放大倍数。",
+    "studyKind": "understand",
+    "topic": "三极管结构、电流与参数",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 388,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "镜像电流源电路中两只晶体管的特性应完全相同。",
+    "studyKind": "understand",
+    "topic": "电流源与有源负载",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 389,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在差分放大电路中采用恒流源作集电极负载电阻能够增大差模放大倍数。",
+    "studyKind": "understand",
+    "topic": "电流源与有源负载",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 390,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在差分放大电路中采用恒流源作集电极负载电阻可以增大共模抑制比。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 391,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "差动放大电路中的长尾电阻R对共模信号和差模信号都有负反馈作用，因此这种电路是靠牺牲差模电压放大倍数来换取对共模信号的抑制作用的。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 392,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "当集成运放工作在非线性区时，输出电压不是高电平就是低电平。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 393,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "理想的差动放大电路，只能放大差模信号，不能放大共模信号。",
+    "studyKind": "understand",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 394,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "运放的输入失调电压UIO是两输入端电位之差。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 395,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "运放的输入失调电流IIO是两端电流之差。",
+    "studyKind": "memory",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 396,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "运放的共模抑制比KCMR=|Ad/Ac|。",
+    "studyKind": "memory",
+    "topic": "差分放大与共模抑制",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 397,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "有源负载可以增大放大电路的输出电流。",
+    "studyKind": "understand",
+    "topic": "电流源与有源负载",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 398,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在输入信号作用时，偏置电路改变了各放大管的动态电流。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 399,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "运算电路中一般均引入负反馈。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 400,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "同相比例运算电路的闭环电压放大倍数数值一定大于或等于1。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 401,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "在运算电路中，集成运放的反相输入端均为虚地。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 402,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "凡是运算电路都可利用“虚短”和“虚断”的概念求解运算关系。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 403,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放电路必须引入深度负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 404,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "运放深度负反馈情况下，放大特性与运放本身参数无关，往往决定于外接电路元件及其参数，因而在使用过程中不需要考虑运放的特性参数。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 405,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "集成运放构成放大电路不但能放大交流信号，也能放大直流信号。",
+    "studyKind": "understand",
+    "topic": "交直流通路与小信号模型",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 406,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "为了提高集成运放组成的放大电路增益，可选用10MΩ电阻作为反馈电阻。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 407,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "反相输入式集成运放的虚地可以直接接地。",
+    "studyKind": "understand",
+    "topic": "运放原理、工作区与虚短虚断",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 408,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "只要集成运放引入正反馈，就一定工作在非线性区。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 409,
+    "chapter": "第七章《模拟集成电路》",
+    "q": "一般情况下，在电压比较器中，集成运放不是工作在开环状态，就是仅仅引入了正反馈。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 431,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "欲得到电流—电压转换电路，应在放大电路中引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 432,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "欲将电压信号转换成与之成比例的电流信号，应在放大电路中引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 433,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "欲减小电路从信号源索取的电流，增大带负载能力，应在放大电路中引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 434,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "欲从信号源获得更大的电流，并稳定输出电流，应在放大电路中引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 435,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "对于放大电路，所谓开环是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 436,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "对于放大电路，所谓闭环是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 437,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在输入量不变的情况下，若引入反馈后（ ），则说明引入的反馈是负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈概念与极性",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 438,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "直流负反馈是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 439,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "交流负反馈是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 440,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了稳定放大电路的输出电压，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 441,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了稳定放大电路的输出电流，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 442,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了增大放大电路的输入电阻，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 443,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了减小放大电路的输入电阻，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 444,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了增大放大电路的输出电阻，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 445,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了减小放大电路的输出电阻，应引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 446,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了提高放大电路的输入电阻并稳定输出电流，应引入（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 447,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "反馈放大电路的含义是（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 448,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在下列关于负反馈的说法中，不正确的说法是（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 449,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在深度负反馈电路中，若开环增益A增大1倍，闭环增益AF将（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 450,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "下列说法正确的是（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 451,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "反馈放大器的结构特征是（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 452,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "要想稳定放大器的输出电压，并同时提高其输入电阻，则需引入（ ）负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 453,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "直流反馈是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 454,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "已知某深度负反馈电路中基本放大器的放大倍数A=10000，反馈网络的反馈系数F=0.01，则闭环放大倍数AF约为（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 455,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "电流并联负反馈对放大器的输入、输出电阻的影响是（ ）",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 456,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "电压反馈是指（ ）",
+    "studyKind": "memory",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 457,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "如果希望减小放大电路从信号源索取的电流，则可采用（ ）",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 458,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "串联反馈是（ ）",
+    "studyKind": "memory",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 459,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "要想实现稳定静态电流IC，在放大电路中应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "静态工作点、偏置与失真",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 460,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "要稳定输出电流，放大电路中应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 461,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "要提高带负载能力，放大电路中应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 462,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "减小放大电路向信号源索取的电流应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 463,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈放大器闭环电压放大倍数Auf=100，当它的开环放大倍数变化10%时，闭环放大倍数变化1%，则它的开环放大倍数Au=______。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 464,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈可使放大器增加放大倍数的稳定性，减小 ______，抑制噪声，改变输入输出阻抗等。",
+    "studyKind": "memory",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 465,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "一个电压串联负反馈放大器的闭环增益Auf=100，要求开环增益Au变化10%时，闭环增益变化为0.5%，那么开环增益Au=______。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 466,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "一个电压串联负反馈放大器的闭环增益Auf=100，要求开环增益Au变化10%时，闭环增益变化为0.5%，那么反馈系数Fu=______。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 467,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在反馈电路中，按反馈网络与输出回路的连接方式不同分为 ______ 反馈和 ______ 反馈。",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 468,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在反馈电路中，按反馈网络与输入回路的连接方式不同，分为 ______ 反馈和 ______ 反馈。",
+    "studyKind": "memory",
+    "topic": "反馈概念与极性",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 469,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "放大器中引入 ______ 反馈，可以稳定电压放大倍数并减小输出电阻。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 470,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "某放大电路在输入信号电压为1mV时，输出电压为1V。当加上负反馈后若达到同样的输出电压时，需使输入信号电压为10mV，由此可知所加的反馈深度为 ______ dB。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 471,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "某放大电路在输入信号电压为1mV时，输出电压为1V。当加上负反馈后若达到同样的输出电压时，需使输入信号电压为10mV，由此可知反馈系数为 ______。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 472,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "射极输出器的主要特点是高阻输入、低阻输出和 ______。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 473,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "射极输出器的主要特点是 ______、低阻输出和电压跟随。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 474,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "射极输出器的主要特点是高阻输入、______ 和电压跟随。",
+    "studyKind": "memory",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 475,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在放大器中，为了稳定输出电流，降低输入电阻，应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 476,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在放大器中，为了稳定输出电压，提高输入电阻，应引入 ______ 反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 477,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在进行反相比例放大时，集成运放两个输入端的共模信号Uic=______。",
+    "studyKind": "understand",
+    "topic": "运算电路与比较器",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 478,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈虽然使放大电路的增益 ______，但可 ______ 增益的稳定性。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 479,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "______ 称为负反馈深度，其中F=（xf/xo），F称为 ______。",
+    "studyKind": "memory",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 480,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了提高三极管放大电路的输入电阻，采用 ______ 负反馈。为了稳定输出电流，采用 ______ 负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 481,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "为了稳定三极管放大电路的静态工作点，采用 ______ 负反馈；为了减小输出电阻采用 ______ 负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 482,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈放大电路增益的一般表达式Af=______，当满足深度负反馈时Af=______。",
+    "studyKind": "memory",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 483,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "带有负反馈的放大电路频带宽度为BWf=______BW，其中BW表示 ______，(1+AF)称为 ______。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 484,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "电压负反馈稳定的输出量是 ______，它使输出电阻 ______；电流负反馈稳定的输出量是 ______，它使输出电阻 ______。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 485,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "如果想要改善放大电路的性能，使电路的输出电压稳定并且对电压信号源影响较小，应该在电路中引入 ______ 负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 486,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "如果想要改善放大电路的性能，使电路的输出电流稳定并且对电流信号源影响较小，应该在电路中引入 ______ 负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 487,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈只能减少由放大电路 ______ 产生的非线性失真和噪声。",
+    "studyKind": "memory",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+  },
+  {
+    "id": 488,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "若放大电路的放大倍数为负，则引入的反馈一定是负反馈。",
+    "studyKind": "understand",
+    "topic": "反馈概念与极性",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 489,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈放大电路的放大倍数与组成它的基本放大电路的放大倍数量级相同。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 490,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "若放大电路引入负反馈，则负载电阻变化时，输出电压基本不变。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 491,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "阻容耦合放大电路的耦合电容、旁路电容越多，引入负反馈后，越容易产生低频振荡。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 492,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈可以提高放大电路放大倍数的稳定性。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 493,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "只要在放大电路中引入反馈，就一定能使其性能得到改善。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 494,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "放大电路的级数越多，引入的负反馈越强，电路的放大倍数也就越稳定。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 495,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "反馈量的大小仅仅决定于输出量。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 496,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "既然电流负反馈稳定输出电流，那么必然稳定输出电压。",
+    "studyKind": "understand",
+    "topic": "反馈与输入输出电阻",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 497,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在深度负反馈的条件下，闭环放大倍数Af≈1/F，它与反馈网络有关，而与放大器开环放大倍数A无关，故可省去放大电路，仅留下反馈网络，以获得稳定的放大倍数。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 498,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "由于接入负反馈，则反馈放大电路的A就一定是负值，接入正反馈后A就一定是正值。",
+    "studyKind": "understand",
+    "topic": "反馈概念与极性",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 499,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在负反馈放大电路中，放大器的放大倍数越大，闭环放大倍数就越稳定。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 500,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在深度负反馈放大电路中，只有尽可能地增大开环放大倍数，才能有效地提高闭环放大倍数。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 501,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "在深度负反馈的条件下，由于闭环放大倍数Auf≈1/F，与管子的参数几乎无关，因此可以任意选择晶体管来组成放大级，管子的参数也就没什么意义了。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 502,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "负反馈可以提高放大电路放大倍数的稳定性。",
+    "studyKind": "understand",
+    "topic": "反馈增益、稳定性与带宽",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  },
+  {
+    "id": 503,
+    "chapter": "第八章《反馈放大电路》",
+    "q": "射极输出器是电压串联负反馈放大器，它具有稳定输出电压的作用。",
+    "studyKind": "understand",
+    "topic": "三种组态与放大性能",
+    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+  }
+]
