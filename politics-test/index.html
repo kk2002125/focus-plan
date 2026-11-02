@@ -136,6 +136,7 @@ button{cursor:pointer}
 .cal-day.done{background:var(--green);color:#fff;font-weight:800}
 .cal-day.today{outline:2px solid var(--green)}
 </style>
+<link rel="stylesheet" href="./mastery.css">
 </head>
 <body>
 <div id="app"></div>
@@ -18964,6 +18965,7 @@ window.__EMBEDDED_QUESTIONS__=[
   }
 ];
 </script>
+<script src="./mastery-core.js"></script>
 <script>
 const APP_VERSION = "politics-0.3.0";
 const STORE_KEY = "politics_quiz_pwa_v0_1";
@@ -18998,7 +19000,7 @@ function loadState(){
   catch(e){return defaultState();}
 }
 let state = loadState();
-function save(){state.lastSavedAt=Date.now();localStorage.setItem(STORE_KEY, JSON.stringify(state));}
+function save(){state.lastSavedAt=Date.now();localStorage.setItem(STORE_KEY, JSON.stringify(state));window.dispatchEvent(new Event("quiz-state-saved"));}
 function toast(msg){
   toastEl.textContent=msg;toastEl.classList.add("show");
   setTimeout(()=>toastEl.classList.remove("show"),1600);
@@ -19215,6 +19217,7 @@ function home(){
         <div class="hero-stat"><b>${wrongCount}</b><span>当前错题</span></div>
       </div>
     </section>
+    ${window.QuizMasteryUI ? QuizMasteryUI.overview() : ""}
 
     <div class="section-title"><h2>今日记忆任务</h2><span>优先处理到期内容</span></div>
     <div class="memory-card">
@@ -19292,7 +19295,11 @@ function home(){
 }
 function startPractice(mode,limit=null,chapter=null){
   let ids=[];
-  if(mode==="chapter"){
+  if(mode==="selection"){
+    const wanted = new Set(Array.isArray(limit) ? limit : []);
+    ids=questions.filter(q=>wanted.has(q.id)).map(q=>q.id);
+    if(!ids.length){toast("当前筛选下暂无题目");return;}
+  }else if(mode==="chapter"){
     ids=questions.filter(q=>q.chapter===chapter).map(q=>q.id);
     if(!ids.length){toast("本章暂时没有题目");return;}
   }else if(mode==="review"){
@@ -19366,6 +19373,8 @@ function completeLearning(q,m){
   m.todayPasses=2;
   m.learningDay=todayKey();
   m.cycleStart=now;
+  m.reviewPasses=[];
+  m.evidenceComplete=true;
   m.stage=0;
   m.dueTs=addDaysFrom(now,REVIEW_DAYS[0]);
   m.lastDailyComplete=todayKey();
@@ -19378,6 +19387,8 @@ function resetToLearning(q,m){
   m.todayPasses=0;
   m.learningDay=todayKey();
   m.cycleStart=null;
+  m.reviewPasses=[];
+  m.evidenceComplete=true;
   m.stage=0;
   m.dueTs=null;
   m.lapses=(m.lapses||0)+1;
@@ -19387,12 +19398,19 @@ function resetToLearning(q,m){
 }
 function advanceReview(q,m){
   const now=Date.now();
+  // Current answer is inserted into history before advanceReview is called.
+  // Exclude that head item when reconstructing old proof, avoiding double-counting.
+  const proof=QuizMastery.evidence(m,state.history.slice(1),q.id);
+  const passedDay=REVIEW_DAYS[m.stage];
+  m.reviewPasses=[...proof.passes];
+  m.evidenceComplete=proof.known;
+  if(passedDay)m.reviewPasses.push({day:passedDay,ts:now,cycleStart:m.cycleStart});
   let next=m.stage+1;
   // 若复习明显逾期，跳过已经过去的检查点，找到下一个仍在未来的节点。
   while(next<REVIEW_DAYS.length && addDaysFrom(m.cycleStart,REVIEW_DAYS[next])<=now)next++;
   if(next>=REVIEW_DAYS.length){
     m.phase="mastered";m.stage=REVIEW_DAYS.length;m.dueTs=null;
-    practice.feedback="本轮长期记忆节点全部通过 ✓ 已完成 1·3·7·14·30·60 天复习。";
+    practice.feedback="本轮记忆周期已结束 ✓ 实际通过的节点已记录；逾期跳过的节点不计为通过。";
   }else{
     m.stage=next;
     m.dueTs=addDaysFrom(m.cycleStart,REVIEW_DAYS[next]);
@@ -19533,6 +19551,7 @@ function renderPractice(scrollToAnalysis=false){
       <b>${practice.correct?'✓ 回答正确':'✗ 回答错误'}</b><br>正确答案：<b>${answerText(q)}</b>
     </div>
     ${practice.feedback?`<div class="reinforce-note">${practice.feedback}</div>`:""}
+    ${window.QuizMasteryUI ? QuizMasteryUI.details(q) : ""}
     <div class="analysis">
       <h3>详细原理解析</h3>
       <div class="analysis-block principle"><b>① 核心原理</b>${q.principle}</div>
@@ -19545,7 +19564,8 @@ function renderPractice(scrollToAnalysis=false){
     <div class="card">
       <div class="qhead"><span>${q.chapter} · ${q.type==="choice"?"单选题":q.type==="multi"?"多选题":q.type==="truefalse"?"判断题":"填空题"}${practice.mode==="daily"?" · 今日新题":practice.mode==="review"?" · 到期复习":practice.mode==="learning"?" · 学习中":practice.mode==="chapter"?" · 本章练习":""}</span><span><span class="study-timer">⏱ <span id="qTimer">00:00</span></span> ${practice.pos+1}/${practice.queue.length}</span></div>
       <div class="progress" style="margin-bottom:15px"><div style="width:${progress}%"></div></div>
-      <h2 class="qtitle">${q.q}</h2>
+      ${window.QuizMasteryUI ? QuizMasteryUI.forecastWidget(true) : ""}
+      <h2 class="qtitle">${q.q} ${window.QuizMasteryUI ? QuizMasteryUI.badge(q) : ""}</h2>
       ${input}
       ${answer}
       <div class="qactions">
@@ -19655,5 +19675,6 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden&&studySessi
 window.addEventListener("pagehide",()=>{if(studySessionStartedAt)saveStudySession()});
 init();
 </script>
+<script src="./mastery-ui.js"></script>
 </body>
 </html>
