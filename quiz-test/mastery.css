@@ -62,3 +62,7 @@ body:has(.review-dialog[open]){overflow:hidden}
 .chapter-question.familiar{background:var(--green-soft)}
 .chapter-question.current{outline:3px solid var(--green);outline-offset:-2px}
 .chapter-question:focus-visible{outline:3px solid var(--green2)}
+
+.mastery-methods{display:flex;flex-direction:column;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
+.mastery-methods span{font-size:12px;font-weight:500;line-height:1.6}
+@media(max-width:520px){.mastery-methods span{font-size:11px}}

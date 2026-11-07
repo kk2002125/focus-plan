@@ -15,10 +15,19 @@
   }
   function overview() {
     const summary = M.summarize(questions, state.memory, state.history);
+    const breakdown = {
+      weak: {memory: 0, understand: 0},
+      hazy: {memory: 0, understand: 0},
+      familiar: {memory: 0, understand: 0}
+    };
+    for (const q of questions) {
+      const counts = breakdown[info(q).key];
+      if (counts) counts[studyKind(q)]++;
+    }
     return `<section class="card mastery-overview" aria-label="记忆掌握情况">
       <div class="ai-heading"><h2>记忆掌握情况</h2><button class="ai-small" onclick="QuizMasteryUI.explain()">分类说明</button></div>
       <p class="ai-caption">已进入记忆系统 ${summary.entered} / ${summary.total} 题（含学习中）</p>
-      <div class="mastery-grid">${["weak", "hazy", "familiar"].map(key => `<button class="mastery-tile ${key}" onclick="QuizMasteryUI.openList('${key}')"><span>${M.LABELS[key]}</span><b>${summary.counts[key]}</b><small>${summary.percentages[key]}% · 已学习题目</small></button>`).join("")}</div>
+      <div class="mastery-grid">${["weak", "hazy", "familiar"].map(key => `<button class="mastery-tile ${key}" onclick="QuizMasteryUI.openList('${key}')"><span>${M.LABELS[key]}</span><b>${summary.counts[key]}</b><small>${summary.percentages[key]}% · 已学习题目</small><span class="mastery-methods"><span>直接记忆 ${breakdown[key].memory} 题</span><span>原理与计算 ${breakdown[key].understand} 题</span></span></button>`).join("")}</div>
       <div class="mastery-secondary"><button class="ai-small" onclick="QuizMasteryUI.openList('unlearned')">未学习 ${summary.counts.unlearned} 题 ›</button><button class="ai-small" onclick="QuizMasteryUI.openList('due')">到期 / 逾期待复习 ${summary.counts.due} 题 ›</button></div>
     </section>`;
   }
