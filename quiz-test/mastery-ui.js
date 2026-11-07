@@ -67,7 +67,7 @@
     const list = rows();
     listDialog.querySelector("[data-rows]").innerHTML = `<p class="ai-caption">符合筛选 ${list.length} 题</p>
       <button class="primary" onclick="QuizMasteryUI.practiceFiltered()" ${list.length ? "" : "disabled"}>练习当前筛选 ${list.length} 题</button>
-      <div class="mastery-question-list">${list.slice(0, visibleCount).map(q => `<article class="wrong-card"><div class="ai-meta">${esc(q.chapter)} · 第 ${q.id} 题 ${badge(q)}</div><h4>${esc(q.q)}</h4><button class="ai-small" onclick="QuizMasteryUI.practiceOne(${q.id})">练习本题</button></article>`).join("")}</div>
+      <div class="mastery-question-list">${list.slice(0, visibleCount).map(q => `<article class="wrong-card"><div class="ai-meta">${esc(q.chapter)} · 第 ${q.id} 题 ${badge(q)}</div><h4>${q.sourceBank ? q.q : esc(q.q)}</h4><button class="ai-small" onclick="QuizMasteryUI.practiceOne(${q.id})">练习本题</button></article>`).join("")}</div>
       ${list.length > visibleCount ? '<button class="ghost" onclick="QuizMasteryUI.showMore()">继续显示</button>' : ""}
       ${list.length ? "" : '<p class="empty">当前筛选下暂无题目。</p>'}`;
   }
