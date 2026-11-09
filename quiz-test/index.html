@@ -877,9 +877,6 @@ async function init(){
     }
   }
   migrateMemory();
-  if(location.protocol!=="file:" && "serviceWorker" in navigator){
-    navigator.serviceWorker.register("./sw.js").catch(()=>{});
-  }
   home();
 }
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&studySessionStartedAt)saveStudySession()});
