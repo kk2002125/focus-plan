@@ -141,6 +141,7 @@ button{cursor:pointer}
 </style>
 <link rel="stylesheet" href="./mastery.css?v=2">
 <script src="./mastery-core.js?v=1"></script>
+<script src="./auto-backup.js"></script>
 <style>.bank-figure{display:block;max-width:100%;height:auto;margin:12px 0;padding:6px;background:#fff;border-radius:8px;box-sizing:border-box}.option .bank-figure{margin:6px 0}</style>
 </head>
 <body>
@@ -192,7 +193,7 @@ function loadState(){
   }catch(e){return defaultState();}
 }
 let state = loadState();
-function save(){state.lastSavedAt=Date.now();localStorage.setItem(STORE_KEY, JSON.stringify(state));}
+function save(){state.lastSavedAt=Date.now();localStorage.setItem(STORE_KEY, JSON.stringify(state));window.dispatchEvent(new Event('electronics-quiz-state-saved'));}
 function toast(msg){
   toastEl.textContent=msg;toastEl.classList.add("show");
   setTimeout(()=>toastEl.classList.remove("show"),1600);
@@ -355,8 +356,11 @@ function startDaily(){
 }
 function startDueReview(){startPractice("review");}
 function startLearningQueue(){startPractice("learning");}
+function backupPayload(now=new Date(), snapshot=state){
+  return {app:"理解型刷题",version:APP_VERSION,exportedAt:now.toISOString(),storeKey:STORE_KEY,state:snapshot};
+}
 function exportBackup(){
-  const payload={app:"理解型刷题",version:APP_VERSION,exportedAt:new Date().toISOString(),storeKey:STORE_KEY,state};
+  const payload=backupPayload();
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json;charset=utf-8"});
   const url=URL.createObjectURL(blob);
   const a=document.createElement("a");
@@ -827,9 +831,20 @@ function statsView(){
         <button class="primary" onclick="exportBackup()">导出备份</button>
         <button class="ghost" onclick="importBackup()">导入备份</button>
       </div>
+      <details style="margin-top:12px">
+        <summary>自动备份设置</summary>
+        <p class="mini">网页打开时自动保存答题记录、错题和记忆进度，只保留最新 3 份自动备份。</p>
+        <p class="mini" id="auto-backup-status" role="status">自动备份暂不可用，可手动导出。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:9px">
+          <button class="ghost" id="auto-backup-choose" onclick="autoBackup.choose()" hidden>选择保存目录</button>
+          <button class="ghost" id="auto-backup-now" onclick="autoBackup.now()" hidden>立即备份</button>
+          <button class="ghost" id="auto-backup-stop" onclick="autoBackup.stop()" hidden>关闭自动备份</button>
+        </div>
+      </details>
     </div>
     <button class="ghost" style="width:100%;margin-top:16px" onclick="resetData()">清空学习记录</button>
   `,"stats");
+  autoBackup?.render();
 }
 function resetData(){
   if(confirm("确定清空所有答题记录、错题、统计和记忆曲线进度吗？")){
@@ -869,6 +884,7 @@ async function init(){
 }
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&studySessionStartedAt)saveStudySession()});
 window.addEventListener("pagehide",()=>{if(studySessionStartedAt)saveStudySession()});
+const autoBackup=window.ElectronicsBackup?.start(now=>backupPayload(now,JSON.parse(localStorage.getItem(STORE_KEY)||"null")||state));
 init();
 </script>
 <script src="./mastery-ui.js?v=bank-20261107"></script>
