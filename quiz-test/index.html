@@ -637,6 +637,14 @@ function advanceReview(q,m){
 }
 function recordAnswer(q,value,correct){
   const existingMemory=memoryFor(q.id);
+  const day=todayKey();
+  const previousAnswer=state.answers[q.id];
+  const completedToday=!!existingMemory&&(
+    existingMemory.firstCorrectDay===day||
+    existingMemory.lastDailyComplete===day||
+    (previousAnswer?.correct===true&&todayKey(previousAnswer.ts)===day)||
+    (existingMemory.reviewPasses||[]).some(pass=>todayKey(pass.ts)===day)
+  );
   if(existingMemory&&!Array.isArray(existingMemory.reviewPasses)){
     const evidence=QuizMastery.evidence(existingMemory,state.history,q.id);
     existingMemory.reviewPasses=evidence.passes;
@@ -647,9 +655,16 @@ function recordAnswer(q,value,correct){
   if(correct)state.stats.correct++;
   const prev=state.answers[q.id]||{};
   state.answers[q.id]={...prev,value,correct,ts:Date.now(),streak:correct?(prev.streak||0)+1:0};
-  state.history.unshift({id:q.id,correct,ts:Date.now()});
+  state.history.unshift({id:q.id,correct,ts:Date.now(),extraPractice:completedToday});
   state.history=state.history.slice(0,500);
   let m=memoryFor(q.id);
+  if(completedToday){
+    m.firstCorrectDay=day;
+    practice.feedback="本题今天已完成；本次为额外练习，复习安排以今天第一次答对为准。";
+    state.lastQuestionId=q.id;
+    save();
+    return;
+  }
 
   if(m?.phase==="review"){
     const isDue=!!(m.dueTs && m.dueTs<=Date.now());
@@ -678,6 +693,7 @@ function recordAnswer(q,value,correct){
     }
   }
   if(correct){
+    m.firstCorrectDay=day;
     for(let i=practice.queue.length-1;i>practice.pos;i--){
       if(practice.queue[i]===q.id){
         practice.queue.splice(i,1);
