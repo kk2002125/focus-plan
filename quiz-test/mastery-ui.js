@@ -14,6 +14,7 @@
     return '<span class="mastery-badge ' + item.key + '">' + item.label + "</span>";
   }
   function overview() {
+    const forecast = M.forecast(questions, state.memory);
     const summary = M.summarize(questions, state.memory, state.history);
     const breakdown = {
       weak: {memory: 0, understand: 0},
@@ -27,8 +28,13 @@
     return `<section class="card mastery-overview" aria-label="记忆掌握情况">
       <div class="ai-heading"><h2>记忆掌握情况</h2><button class="ai-small" onclick="QuizMasteryUI.explain()">分类说明</button></div>
       <p class="ai-caption">已进入记忆系统 ${summary.entered} / ${summary.total} 题（含学习中）</p>
+      <div class="review-forecast">
+        <button class="ai-small" onclick="QuizMasteryUI.openList('tomorrow')">明日预估复习：<b data-tomorrow-count>${forecast.tomorrowCount}</b> 题 ›</button>
+        <button class="ai-small" onclick="QuizMasteryUI.openList('due')">当前到期未完成：<b data-due-count>${forecast.dueCount}</b> 题 ›</button>
+        <details class="forecast-help"><summary>预估说明</summary><p>按北京时间统计已安排在明天到期的题目，每题只计一次。今天继续新学或复习后，预估数量可能变化。</p></details>
+      </div>
       <div class="mastery-grid">${["weak", "hazy", "familiar"].map(key => `<button class="mastery-tile ${key}" onclick="QuizMasteryUI.openList('${key}')"><span>${M.LABELS[key]}</span><b>${summary.counts[key]}</b><small>${summary.percentages[key]}% · 已学习题目</small><span class="mastery-methods"><span>直接记忆 ${breakdown[key].memory} 题</span><span>原理与计算 ${breakdown[key].understand} 题</span></span></button>`).join("")}</div>
-      <div class="mastery-secondary"><button class="ai-small" onclick="QuizMasteryUI.openList('unlearned')">未学习 ${summary.counts.unlearned} 题 ›</button><button class="ai-small" onclick="QuizMasteryUI.openList('due')">到期 / 逾期待复习 ${summary.counts.due} 题 ›</button></div>
+      <div class="mastery-secondary"><button class="ai-small" onclick="QuizMasteryUI.openList('unlearned')">未学习 ${summary.counts.unlearned} 题 ›</button></div>
     </section>`;
   }
   function modal(title, html) {
@@ -57,10 +63,9 @@
     </div>`);
   }
   function rows() {
-    return questions.filter(q => {
-      const item = info(q);
-      return (!chapter || q.chapter === chapter) && (filter === "due" ? item.due : item.key === filter);
-    });
+    const forecast = ["tomorrow","due"].includes(filter) ? M.forecast(questions, state.memory) : null;
+    const ids = forecast && new Set(filter === "tomorrow" ? forecast.tomorrowIds : forecast.dueIds);
+    return questions.filter(q => (!chapter || q.chapter === chapter) && (ids ? ids.has(q.id) : info(q).key === filter));
   }
   function renderRows() {
     if (!listDialog) return;
@@ -72,11 +77,11 @@
       ${list.length ? "" : '<p class="empty">当前筛选下暂无题目。</p>'}`;
   }
   function openList(key) {
-    if (!["weak", "hazy", "familiar", "unlearned", "due"].includes(key)) return;
+    if (!["weak", "hazy", "familiar", "unlearned", "due", "tomorrow"].includes(key)) return;
     filter = key;
     chapter = "";
     visibleCount = 40;
-    listDialog = modal(key === "due" ? "到期待复习" : M.LABELS[key] + "题目",
+    listDialog = modal(key === "tomorrow" ? "明日预估复习" : key === "due" ? "当前到期未完成" : M.LABELS[key] + "题目",
       `<label class="chapter-filter">按章节筛选<select><option value="">全部章节</option>${chapterList().map(name => `<option value="${esc(name)}">${esc(name)}</option>`).join("")}</select></label><div data-rows></div>`);
     listDialog.querySelector("select").onchange = event => { chapter = event.target.value; visibleCount = 40; renderRows(); };
     renderRows();
@@ -113,5 +118,20 @@
     document.querySelector(".chapter-question.current")?.scrollIntoView({block:"nearest"});
   }
   window.QuizMasteryUI = {info, badge, overview, explain, openList, practiceFiltered, practiceOne, showMore, chapterGrid, jumpChapter};
+  function refreshForecast() {
+    const widget = document.querySelector(".review-forecast");
+    if (!widget) return;
+    const forecast = M.forecast(questions, state.memory);
+    widget.querySelector("[data-tomorrow-count]").textContent = forecast.tomorrowCount;
+    widget.querySelector("[data-due-count]").textContent = forecast.dueCount;
+    if (listDialog && ["tomorrow", "due"].includes(filter)) renderRows();
+  }
+  function scheduleRollover() {
+    const midnight = M.forecast([], {}).tomorrowStart;
+    setTimeout(() => { refreshForecast(); scheduleRollover(); }, Math.max(1, midnight - Date.now()));
+  }
+  window.addEventListener("electronics-quiz-state-saved", refreshForecast);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshForecast(); });
+  scheduleRollover();
   if (view === "home") home();
 })();
