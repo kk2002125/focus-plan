@@ -579,13 +579,45 @@ function go(v){
 }
 function getQ(){return questions.find(q=>q.id===practice.queue[practice.pos]);}
 function normalize(s){return (s||"").trim().replace(/\s+/g,"").replace(/[，,；;]/g,";")}
+// Spaces may separate blanks or appear inside a formula, for example "20 lg|Av|".
+function matchesBlankGroups(input, groups){
+  const parts = Array.from(input.matchAll(/([^\s,，;；]+)([\s,，;；]*)/gu),
+    ([, text, separator]) => ({text, separator: normalize(separator)}));
+  const used = new Set();
+  function matchFrom(start){
+    if(start === parts.length) return used.size === groups.length;
+    for(const [index, aliases] of groups.entries()){
+      if(used.has(index)) continue;
+      let value = "";
+      for(let end = start; end < parts.length; end++){
+        value += parts[end].text;
+        if(!aliases.some(alias => alias.startsWith(value))) break;
+        if(aliases.includes(value)){
+          used.add(index);
+          if(matchFrom(end + 1)) return true;
+          used.delete(index);
+        }
+        value += parts[end].separator;
+      }
+    }
+    return false;
+  }
+  return matchFrom(0);
+}
 function fillCorrect(q,v){
-  if(q.sourceBank && Array.isArray(q.accepted_answers) && q.accepted_answers.some(answer=>normalize(answer)===normalize(v)))return true;
-  if(q.display_answer && normalize(v)===normalize(q.display_answer)) return true;
-  const p=normalize(v).split(";").filter(Boolean);
-  if(q.answers.length===1)return q.answers[0].some(a=>normalize(a)===normalize(v));
-  if(p.length!==q.answers.length)return false;
-  return q.answers.every((g,i)=>g.some(a=>normalize(a)===normalize(p[i])));
+  const value = normalize(v);
+  const fullAnswers = [q.display_answer, ...(q.sourceBank ? q.accepted_answers || [] : [])].filter(Boolean);
+  if(fullAnswers.some(answer => normalize(answer) === value)) return true;
+  if(q.answers.length === 1) return q.answers[0].some(answer => normalize(answer) === value);
+
+  const groups = q.answers.map(aliases => aliases.map(normalize));
+  for(const answer of fullAnswers){
+    const fields = answer.split(/[;；]/);
+    if(fields.length === groups.length){
+      fields.forEach((field,i) => groups[i].push(normalize(field)));
+    }
+  }
+  return matchesBlankGroups(v, groups);
 }
 function isCorrect(q,v){return (q.type==="choice"||q.type==="truefalse")?v===q.answer:fillCorrect(q,v)}
 function answerText(q){return (q.type==="choice"||q.type==="truefalse")?(q.options.find(o=>o[0]===q.answer)||q.answer):q.display_answer}
@@ -781,7 +813,7 @@ function renderPractice(scrollToAnalysis=false){
     }).join("")}</div>`;
   }else{
     input=`<div class="fill-row">
-      <input id="fill" class="fill" placeholder="${q.sourceBank&&q.answers?.length>1?'各空用分号隔开':q.id===14?'两空用分号隔开':'请输入答案'}" value="${practice.currentAnswer||""}" ${done?"disabled":""} oninput="practice.currentAnswer=this.value" onkeydown="if(event.key==='Enter')submitFill()">
+      <input id="fill" class="fill" placeholder="${q.answers?.length>1?'空格或分号隔开，顺序不限':'请输入答案'}" value="${esc(practice.currentAnswer||"")}" ${done?"disabled":""} oninput="practice.currentAnswer=this.value" onkeydown="if(event.key==='Enter')submitFill()">
       <button class="primary" ${done?"disabled":""} onclick="submitFill()">答题</button>
     </div>`;
   }
