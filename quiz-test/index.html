@@ -710,13 +710,13 @@ function submitFill(){
   renderPractice(true);
 }
 function savePracticeAttempt(){
-  practice.attempts[practice.pos]={currentAnswer:practice.currentAnswer,done:practice.done,correct:practice.correct,feedback:practice.feedback};
+  practice.attempts[practice.pos]={currentAnswer:practice.currentAnswer,done:practice.done,correct:practice.correct,feedback:practice.feedback,revealed:!!practice.revealed};
 }
 function jumpPractice(position){
   if(position<0||position>=practice.queue.length||position===practice.pos)return;
   savePracticeAttempt();
   practice.pos=position;
-  Object.assign(practice,practice.attempts[position]||{currentAnswer:"",done:false,correct:false,feedback:""});
+  Object.assign(practice,practice.attempts[position]||{currentAnswer:"",done:false,correct:false,feedback:"",revealed:false});
   renderPractice();
 }
 function nextQuestion(){
@@ -727,12 +727,29 @@ function nextQuestion(){
   else{stopStudySession();toast("本轮完成");home();}
 }
 function prevQuestion(){jumpPractice(practice.pos-1);}
+function revealCalculationAnswer(){
+  if(practice.done)return;
+  practice.revealed=true;
+  renderPractice();
+}
+function gradeCalculation(correct){
+  if(practice.done||!practice.revealed)return;
+  const q=getQ();
+  if(studyKind(q)!=='understand')return;
+  practice.currentAnswer=correct?'自评答对':'自评答错';
+  practice.correct=correct;practice.done=true;
+  recordAnswer(q,practice.currentAnswer,correct);
+  renderPractice(true);
+}
 function renderPractice(scrollToAnalysis=false){
   const q=getQ();
   const done=practice.done;
   const progress=Math.round((practice.pos+1)/practice.queue.length*100);
   let input="";
-  if(q.type==="choice"||q.type==="truefalse"){
+  if(studyKind(q)==='understand'){
+    const referenceOptions=(q.type==='choice'||q.type==='truefalse')?`<div class="options">${q.options.map(o=>`<div class="option">${o}</div>`).join('')}</div>`:'';
+    input=referenceOptions+(practice.done||practice.revealed?'':'<button class="primary" style="width:100%" onclick="revealCalculationAnswer()">查看答案</button>');
+  }else if(q.type==="choice"||q.type==="truefalse"){
     input=`<div class="options">${q.options.map(o=>{
       const k=o[0];let c="option";
       if(practice.currentAnswer===k)c+=" selected";
@@ -747,12 +764,12 @@ function renderPractice(scrollToAnalysis=false){
     </div>`;
   }
   let answer="";
-  if(done){
+  if(done||(studyKind(q)==='understand'&&practice.revealed)){
     answer=`<div id="analysisStart" class="answer-banner ${practice.correct?'good':'bad'}">
-      <b>${practice.correct?'✓ 回答正确':'✗ 回答错误'}</b><br>正确答案：<b>${answerText(q)}</b>
+      <b> ${!done?'参考答案':practice.correct?'✓ 回答正确':'✗ 回答错误'}</b><br>正确答案：<b>${answerText(q)}</b>
     </div>
     ${practice.feedback?`<div class="reinforce-note">${practice.feedback}</div>`:""}
-    <div class="memory-detail" role="status"><b>下次复习</b><p>${memoryFor(q.id)?.phase==='review'&&memoryFor(q.id).dueTs?new Date(memoryFor(q.id).dueTs).toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric'}):memoryFor(q.id)?.phase==='mastered'?'本轮记忆周期已完成':'本轮继续重学，答对后安排具体日期'}</p></div>
+    ${done?`<div class="memory-detail" role="status"><b>下次复习</b><p>${memoryFor(q.id)?.phase==='review'&&memoryFor(q.id).dueTs?new Date(memoryFor(q.id).dueTs).toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric'}):memoryFor(q.id)?.phase==='mastered'?'本轮记忆周期已完成':'本轮继续重学，答对后安排具体日期'}</p></div>` : ''}
     <div class="analysis">
       <h3>详细原理解析</h3>
       <div class="analysis-block principle"><b>① 核心原理</b>${q.principle}</div>
@@ -771,6 +788,7 @@ function renderPractice(scrollToAnalysis=false){
       <h2 class="qtitle">${q.q}</h2>
       ${input}
       ${answer}
+      ${studyKind(q)==='understand'&&practice.revealed&&!done?'<div class="qactions"><button class="ghost" onclick="gradeCalculation(false)">答错</button><button class="primary" onclick="gradeCalculation(true)">答对</button></div>':''}
       <div class="qactions">
         <button class="ghost" onclick="prevQuestion()" ${practice.pos===0?"disabled":""}>上一题</button>
         <button class="${done?'primary':'ghost'}" onclick="nextQuestion()" ${practice.pos===practice.queue.length-1&&!done?"disabled":""}>${done?"我懂了，下一题":"下一题"}</button>
