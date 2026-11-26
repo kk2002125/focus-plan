@@ -770,13 +770,13 @@ function renderPractice(scrollToAnalysis=false){
     </div>
     ${practice.feedback?`<div class="reinforce-note">${practice.feedback}</div>`:""}
     ${done?`<div class="memory-detail" role="status"><b>下次复习</b><p>${memoryFor(q.id)?.phase==='review'&&memoryFor(q.id).dueTs?new Date(memoryFor(q.id).dueTs).toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric'}):memoryFor(q.id)?.phase==='mastered'?'本轮记忆周期已完成':'本轮继续重学，答对后安排具体日期'}</p></div>` : ''}
-    <div class="analysis">
-      <h3>详细原理解析</h3>
+    <details class="analysis">
+      <summary style="cursor:pointer;min-height:44px;padding:10px 0;font-weight:700">查看详细解析</summary>
       <div class="analysis-block principle"><b>① 核心原理</b>${q.principle}</div>
       <div class="analysis-block why"><b>② 为什么是这个答案</b>${q.why}</div>
       <div class="analysis-block mistake"><b>③ 易错点</b>${q.mistake}</div>
       <div class="analysis-block memory"><b>④ 快速记忆</b>${q.memory}</div>
-    </div>`;
+    </details>`;
   }
   app.innerHTML=shell(`
     ${window.QuizMasteryUI?.chapterGrid()||""}
