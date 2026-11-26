@@ -66,3 +66,33 @@ body:has(.review-dialog[open]){overflow:hidden}
 .mastery-methods{display:flex;flex-direction:column;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
 .mastery-methods span{font-size:12px;font-weight:500;line-height:1.6}
 @media(max-width:520px){.mastery-methods span{font-size:11px}}
+
+/* Keep answer states readable after the answer buttons become disabled. */
+.option:disabled{opacity:1;-webkit-text-fill-color:currentColor}
+.option.correct{color:#155b3d}
+.option.wrong{color:#8c2929}
+@media(prefers-color-scheme:dark){
+  :root{color-scheme:dark;--green2:#85dfb4;--red:#ffaaaa;--amber:#f0c46d}
+  .option{color:#eaf2ed;background:#18211c}
+  .option.selected{color:#d9f7e8;background:#213e31;border-color:#65c99b}
+  .option.correct{color:#d9f7e8;background:#214b38;border-color:#79ddb0}
+  .option.wrong{color:#ffd7d7;background:#4a292d;border-color:#ee979f}
+  .tag{color:#d0ded6;background:#293930}
+  .progress{background:#34453c}
+  .analysis-block.principle{background:#1d352a}
+  .analysis-block.memory{background:#3b301e}
+  .wrong-card{background:var(--surface)}
+  .calendar-nav button,.cal-day{background:#293930}
+  .cal-day.done{background:#109965}
+  .plan-input,.plan-row select{color:var(--text);background:var(--surface)}
+}
+@media(max-width:520px){
+  .qhead{align-items:flex-start;line-height:1.5}
+  .qhead>span:first-child{flex:1;min-width:0}
+  .qhead>span:last-child{flex-shrink:0}
+  .options{gap:10px}
+  .option{min-height:52px;overflow-wrap:anywhere}
+  .chapter-picker{margin-bottom:12px}
+  .chapter-question-grid{max-height:170px;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:6px}
+  .chapter-question{min-height:48px;padding:7px 3px}
+}
