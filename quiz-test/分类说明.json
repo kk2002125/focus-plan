@@ -5,15 +5,15 @@
     "q": "基尔霍夫电压定律适用于对（ ）列电压方程。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 2,
     "chapter": "第一章《绪论》",
     "q": "理想变压器主要特性不包括（ ）。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "识别理想变压器的固定特性：变压、变流、变阻抗，功率守恒。先记特性并能解释功率不变。"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "q": "正弦稳态电路中，R、L 和 C 串联，它们的电压有效值分别为 4V、3V 和 6V，则它们串联的总电压有效值为（ ）。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需要按相位关系将电感和电容电压相减，再与电阻电压做平方和开方，属于相量计算。"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "q": "对于一个具有 n 个节点、b 条支路的连通电路来说，可以列出独立的 KCL 方程的数目是（ ）。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "q": "在正弦稳态 RLC 串联电路发生谐振后，当 ω 增加时，电路呈现（ ）。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需结合频率变化比较ωL和1/(ωC)，判断总电抗符号，属于趋势推理。"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "q": "当实际电流源开路时，该电流源内部（ ）。",
     "studyKind": "understand",
     "topic": "交直流通路与小信号模型",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需画实际电流源的并联内阻模型并分析开路时的内部电流路径，属于等效电路分析。"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "q": "在换路瞬间，下列说法中正确的是（ ）。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "q": "换路定则的本质是遵循（ ）。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 9,
@@ -69,15 +69,15 @@
     "q": "为了从信号中提取高频部分，应选用（ ）。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 10,
     "chapter": "第一章《绪论》",
     "q": "为防止 50Hz 电网电压干扰混入信号之中，应选用（ ）。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "固定用途对应：抑制50Hz窄带干扰选带阻或陷波，与高通、低通、带通用途一起记忆。"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "q": "为获取信号中的直流成分，应选用（ ）。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 12,
@@ -93,15 +93,15 @@
     "q": "收音机用于选台的滤波器应为（ ）。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 13,
     "chapter": "第一章《绪论》",
     "q": "下列关于滞回比较器的说法，不正确的是（ ）。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "运算电路与比较器",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆滞回比较器的正反馈、双门限、非线性饱和工作等固定特征，再逐项识别。"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "q": "自然界的各种物理量必须首先经过 ______ 将非电量转换为电量，即 ______。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "q": "信号在频域中表示的图形或曲线称为信号的 ______。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "q": "通过傅立叶变换可以实现信号从 ______ 到频域的变换。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "q": "各种信号各频率分量的 ______ 随角频率变化的分布，称为该信号的幅度频谱。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "q": "各种信号各频率分量的 ______ 随角频率变化的分布，称为该信号的相位频谱。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "q": "周期信号的频谱都由 ______、______以及______组成。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "q": "在时间上和幅值上均是连续的信号 ______。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "q": "在时间上和幅值上均是离散的信号 ______。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "q": "放大电路分为 ______、______、______以及______四类。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "q": "______、______、______、______和______等主要性能指标是衡量放大电路的标准。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "q": "放大电路的增益实际上反映了______的能力。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "q": "放大电路的电压增益和电流增益在工程上常用“分贝”表示，其表达式分别是 ______、______。",
     "studyKind": "memory",
     "topic": "信号、频谱与基本指标",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "q": "放大电路的频率响应指的是，在输入正弦信号情况下，输出随______的稳态响应。",
     "studyKind": "memory",
     "topic": "频率响应与振荡",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "q": "幅频响应是指______之间的关系。",
     "studyKind": "memory",
     "topic": "频率响应与振荡",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 28,
@@ -221,23 +221,23 @@
     "q": "相频响应是指______之间的关系。",
     "studyKind": "memory",
     "topic": "频率响应与振荡",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 29,
     "chapter": "第一章《绪论》",
     "q": "在一阶电路中，时间常数的大小不影响电路过渡过程持续的时间。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "直接调用一阶电路的固定结论：时间常数越大，过渡过程越慢；无需求具体响应。"
   },
   {
     "id": 30,
     "chapter": "第一章《绪论》",
     "q": "三要素法可以计算一阶电路中各处的电压和电流。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆三要素法适用于一阶电路及其初始值、稳态值、时间常数，无具体参数推算。"
   },
   {
     "id": 31,
@@ -245,7 +245,7 @@
     "q": "当两个线圈的耦合系数等于1时为全耦合。",
     "studyKind": "memory",
     "topic": "交直流通路与小信号模型",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 32,
@@ -253,7 +253,7 @@
     "q": "无源线性二端口无论是否对称，Z参数中只有2个参数是独立的。",
     "studyKind": "understand",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需区分一般、互易、对称等条件下独立参数数目，属于条件辨析。"
   },
   {
     "id": 33,
@@ -261,7 +261,7 @@
     "q": "非正弦周期量的有效值等于它各次谐波有效值之和。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需理解不同谐波的正交关系及有效值平方和合成，避免错误的算术相加。"
   },
   {
     "id": 34,
@@ -269,7 +269,7 @@
     "q": "对称三相电路中，线电压与相电压相等。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需区分星形与三角形连接条件，再判断线电压和相电压关系。"
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "q": "空心变压器副边如接感性负载，则反映到原边的引入电抗一定呈容性。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需区分空心耦合线圈的引入阻抗与理想变压器折算，结合等效模型判断性质。"
   },
   {
     "id": 36,
@@ -285,15 +285,15 @@
     "q": "叠加定理只适用于线性电路求电压和电流，不适用于求功率。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 37,
     "chapter": "第一章《绪论》",
     "q": "网络函数仅与网络的结构和参数有关，与激励的函数形式无关。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆线性时不变网络在零初始条件下网络函数由结构和参数决定的基本性质。"
   },
   {
     "id": 38,
@@ -301,7 +301,7 @@
     "q": "当两互感线圈的电流同时流出同名端时，两个电流所产生的磁场是互相削弱的。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需结合同名端及两个电流方向判断助磁、反磁，属于方向分析。"
   },
   {
     "id": 39,
@@ -309,15 +309,15 @@
     "q": "有效值、角频率和初相位称为正弦量的三要素。",
     "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 40,
     "chapter": "第一章《绪论》",
     "q": "电压、电流的参考方向可任意指定，指定的参考方向不同，不影响问题最后的结论。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆参考方向可任意选定、全过程保持一致的基本规则。"
   },
   {
     "id": 41,
@@ -325,7 +325,7 @@
     "q": "在使用节点电压法对电路做分析时，与电流源串联的电阻不计入自电导或互电导。",
     "studyKind": "understand",
     "topic": "电路定律与分析方法",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需结合电流源支路和节点法建模条件判断电导项，属于电路方程分析。"
   },
   {
     "id": 42,
@@ -333,39 +333,39 @@
     "q": "一个实际的电感线圈，在任何情况下呈现的电特性都是感性的。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需结合实际线圈寄生电容、工作频率和自谐振分析电抗性质。"
   },
   {
     "id": 43,
     "chapter": "第一章《绪论》",
     "q": "某感性负载，电压的初相位一定小于电流的初相位，即U滞后于I。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "直接记忆感性负载电压超前电流的相位关系，与容性关系对照辨别。"
   },
   {
     "id": 44,
     "chapter": "第一章《绪论》",
     "q": "中线的作用就是使不对称Y接负载的端电压保持对称。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆理想中线稳定不对称星形负载中性点、避免相电压偏移的作用。"
   },
   {
     "id": 45,
     "chapter": "第一章《绪论》",
     "q": "负载作星形连接时，必有线电流等于相电流。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "星形连接线电流等于相电流是固定连接关系，先记忆并用串联关系解释。"
   },
   {
     "id": 46,
     "chapter": "第一章《绪论》",
     "q": "两个串联互感线圈的感应电压极性，取决于电流流向，与同名端无关。",
-    "studyKind": "understand",
+    "studyKind": "memory",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "记忆互感电压极性须结合同名端和电流变化方向判断；本题不要求具体定极性或列方程。"
   },
   {
     "id": 47,
@@ -373,7 +373,7 @@
     "q": "不同频率的电压和电流不能构成平均功率，也不能构成瞬时功率。",
     "studyKind": "understand",
     "topic": "交流电路、变压器与互感",
-    "classificationReason": "需要结合条件判断、理解电路关系或代入公式。"
+    "classificationReason": "需区分瞬时功率定义与不同频率分量平均功率的条件，属于概念应用与条件辨析。"
   },
   {
     "id": 48,
@@ -381,7 +381,7 @@
     "q": "网络函数分母部分多项式等于零的根，称为网络函数的极点，它恰好为网络的固有频率。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 49,
@@ -389,7 +389,7 @@
     "q": "网络函数的原函数即为该电路的单位冲激响应。",
     "studyKind": "memory",
     "topic": "电路定律与分析方法",
-    "classificationReason": "定义、名称或常用结论，适合先记忆。"
+    "classificationReason": "本题直接考查名称、定义、基本公式或固定结论，先准确记忆，再结合已有解析理解适用条件。"
   },
   {
     "id": 50,
