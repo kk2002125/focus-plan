@@ -436,7 +436,7 @@ function home(){
     ${classificationHTML()}
     <section class="hero">
       <h1>背结论，也掌握解题方法</h1>
-      <p>当天先通过两次间隔验证，再进入 1·3·7·14·30·60 天记忆曲线。</p>
+      <p>新学或重学答对一次，即进入 1·3·7·14·30·60 天记忆曲线。</p>
       <div class="hero-grid">
         <div class="hero-stat"><b>${todayDone}</b><span>今日已刷</span></div>
         <div class="hero-stat"><b>${due}</b><span>到期复习</span></div>
@@ -457,7 +457,7 @@ function home(){
         <button class="primary" onclick="startDueReview()" ${due?"":"disabled"}>复习到期题 ${due?`(${due})`:""}</button>
         <button class="ghost" onclick="startLearningQueue()" ${learning?"":"disabled"}>继续学习中 ${learning?`(${learning})`:""}</button>
       </div>
-      <div class="memory-hint">规则：新题或忘记的题，当天必须“间隔答对 2 次”才算完成；任何一次答错都会清零并继续推回。进入长期复习后，在 1/3/7/14/30/60 天节点答对就向后推进；节点答错则重新学习，并从新的完成日期重新开始整条曲线。</div>
+      <div class="memory-hint">规则：新题或忘记的题，答对一次就算本次完成；答错会继续推回，直到答对一次。进入长期复习后，在 1/3/7/14/30/60 天节点答对就向后推进；节点答错则重新学习，并从新的完成日期重新开始整条曲线。</div>
     </div>
 
     <div class="section-title"><h2>学习打卡</h2><span>${new Date().getMonth()+1} 月</span></div>
@@ -500,7 +500,7 @@ function home(){
       </div>
       <div class="card">
         <b style="font-size:18px">只刷错题</b>
-        <p class="mini">集中处理当前错题；完成两次间隔答对后重新进入记忆曲线。</p>
+        <p class="mini">集中处理当前错题；答对一次后重新进入记忆曲线。</p>
         <button class="ghost" style="width:100%;margin-top:5px" onclick="startPractice('wrong')">错题训练</button>
       </div>
     </div>
@@ -596,7 +596,7 @@ function completeLearning(q,m){
   const wasWrong=state.wrongIds.includes(q.id);
   m.phase="review";
   m.reviewPasses=[];m.evidenceComplete=true;
-  m.todayPasses=2;
+  m.todayPasses=1;
   m.learningDay=todayKey();
   m.cycleStart=now;
   m.stage=0;
@@ -617,7 +617,7 @@ function resetToLearning(q,m){
   m.lapses=(m.lapses||0)+1;
   if(!state.wrongIds.includes(q.id))state.wrongIds.push(q.id);
   enqueueAgain(q.id,4);
-  practice.feedback="这次忘记了：记忆曲线已重置。题目会再次推回；今天重新完成 2 次间隔答对后，再从第 1 天开始。";
+  practice.feedback="这次忘记了：记忆曲线已重置。题目会再次推回；重新答对一次后，再从第 1 天开始。";
 }
 function advanceReview(q,m){
   const now=Date.now();
@@ -674,13 +674,14 @@ function recordAnswer(q,value,correct){
       enqueueAgain(q.id,4);
       practice.feedback="回答错误：今日掌握计数已清零，稍后会再次出现。";
     }else{
-      m.phase="learning";
-      m.todayPasses=(m.todayPasses||0)+1;
-      if(m.todayPasses>=2){
-        completeLearning(q,m);
-      }else{
-        enqueueAgain(q.id,8);
-        practice.feedback="第一次间隔验证通过 ✓ 还需要再答对 1 次才算今日完成，稍后会再次出现。";
+      completeLearning(q,m);
+    }
+  }
+  if(correct){
+    for(let i=practice.queue.length-1;i>practice.pos;i--){
+      if(practice.queue[i]===q.id){
+        practice.queue.splice(i,1);
+        practice.attempts.splice(i,1);
       }
     }
   }
@@ -792,7 +793,7 @@ function wrongView(){
         <div class="mini">${q.memory}</div>
       </div>`).join("")}</div>
       <button class="primary" style="width:100%;margin-top:14px" onclick="startPractice('wrong')">开始错题强化</button>`
-      :`<div class="card empty">目前没有错题。连续两次答对一道错题后，它会自动移出错题本。</div>`}
+      :`<div class="card empty">目前没有错题。答对一道错题后，它会自动移出错题本。</div>`}
   `,"wrong");
 }
 function statsView(){
