@@ -93,24 +93,23 @@
   function showMore() { visibleCount += 40; renderRows(); }
 
   function chapterGrid() {
-    if (practice?.mode !== "chapter") return "";
+    if (!practice) return "";
     const current = getQ();
-    const list = questions.filter(q => q.chapter === current.chapter);
-    return `<section class="card chapter-picker" aria-label="本章选题"><h2>本章选题</h2><p class="mini">点击题号可直接练习本章任意题目</p><div class="chapter-question-grid">${list.map((q, index) => {
-      const item = info(q);
-      return `<button class="chapter-question ${item.key} ${q.id === current.id ? "current" : ""}" ${q.id === current.id ? 'aria-current="true"' : ""} aria-label="本章第 ${index + 1} 题 · ${item.label}" onclick="QuizMasteryUI.jumpChapter(${q.id})"><b>${index + 1}</b><small>${item.label}</small></button>`;
+    const title=practice.mode==="chapter"?"本章选题":["review","filteredReview"].includes(practice.mode)?"复习选题":"本轮选题";
+    const ids=[...new Set(practice.queue)];
+    return `<section class="card chapter-picker" aria-label="${title}"><h2>${title}</h2><div class="chapter-question-grid">${ids.map((id,index)=>{
+      const q=questions.find(q=>q.id===id),item=info(q);
+      const positions=practice.queue.flatMap((value,i)=>value===id?[i]:[]);
+      const done=positions.every(i=>i===practice.pos?practice.done:practice.attempts[i]?.done);
+      return `<button class="chapter-question ${item.key} ${id===current.id?"current":""}" ${id===current.id?'aria-current="true"':""} onclick="QuizMasteryUI.jumpChapter(${id})"><b>${index+1}</b><small>${done?"已作答":item.label}</small></button>`;
     }).join("")}</div></section>`;
   }
   function jumpChapter(id) {
-    if (practice?.mode !== "chapter") return;
-    const position = practice.queue.indexOf(id);
-    if (position < 0 || getQ().id === id) return;
-    practice.pos = position;
-    practice.currentAnswer = "";
-    practice.done = false;
-    practice.correct = false;
-    practice.feedback = "";
-    renderPractice();
+    if(!practice)return;
+    const positions=practice.queue.flatMap((value,i)=>value===id?[i]:[]);
+    const position=positions.find(i=>i===practice.pos?!practice.done:!practice.attempts[i]?.done)??positions[0];
+    if(position===undefined)return;
+    jumpPractice(position);
     document.querySelector(".chapter-question.current")?.scrollIntoView({block:"nearest"});
   }
   window.QuizMasteryUI = {info, badge, overview, explain, openList, practiceFiltered, practiceOne, showMore, chapterGrid, jumpChapter};

@@ -557,6 +557,7 @@ function startPractice(mode,limit=null,chapter=null){
     ids=ordered.map(q=>q.id);
   }
   practice={queue:ids,pos:0,currentAnswer:"",done:false,correct:false,mode,plannedCount:ids.length,feedback:""};
+  practice.attempts=ids.map(()=>null);
   stopStudySession();studySessionBase=(state.studySecondsByDay?.[todayKey()]||0);studySessionStartedAt=null;
   view="practice";renderPractice();
 }
@@ -588,6 +589,7 @@ function enqueueAgain(id,offset){
   if(future.includes(id))return;
   const at=Math.min(practice.pos+1+offset,practice.queue.length);
   practice.queue.splice(at,0,id);
+  practice.attempts.splice(at,0,null);
 }
 function completeLearning(q,m){
   const now=Date.now();
@@ -706,22 +708,24 @@ function submitFill(){
   recordAnswer(q,v,practice.correct);
   renderPractice(true);
 }
+function savePracticeAttempt(){
+  practice.attempts[practice.pos]={currentAnswer:practice.currentAnswer,done:practice.done,correct:practice.correct,feedback:practice.feedback};
+}
+function jumpPractice(position){
+  if(position<0||position>=practice.queue.length||position===practice.pos)return;
+  savePracticeAttempt();
+  practice.pos=position;
+  Object.assign(practice,practice.attempts[position]||{currentAnswer:"",done:false,correct:false,feedback:""});
+  renderPractice();
+}
 function nextQuestion(){
-  if(practice.pos<practice.queue.length-1){
-    practice.pos++;practice.done=false;practice.correct=false;practice.currentAnswer="";
-    renderPractice();window.scrollTo({top:0,behavior:"smooth"});
-  }else{
-    stopStudySession();
-    toast("本轮完成");
-    home();
-  }
+  savePracticeAttempt();
+  let next=practice.pos+1;
+  if(next>=practice.queue.length)next=practice.attempts.findIndex(item=>!item?.done);
+  if(next>=0)jumpPractice(next);
+  else{stopStudySession();toast("本轮完成");home();}
 }
-function prevQuestion(){
-  if(practice.pos>0){
-    practice.pos--;practice.done=false;practice.correct=false;practice.currentAnswer="";
-    renderPractice();window.scrollTo({top:0,behavior:"smooth"});
-  }
-}
+function prevQuestion(){jumpPractice(practice.pos-1);}
 function renderPractice(scrollToAnalysis=false){
   const q=getQ();
   const done=practice.done;
@@ -884,6 +888,6 @@ window.addEventListener("pagehide",()=>{if(studySessionStartedAt)saveStudySessio
 const autoBackup=window.ElectronicsBackup?.start(now=>backupPayload(now,JSON.parse(localStorage.getItem(STORE_KEY)||"null")||state));
 init();
 </script>
-<script src="./mastery-ui.js?v=bank-20261107"></script>
+<script src="./mastery-ui.js?v=picker2?v=bank-20261107"></script>
 </body>
 </html>
