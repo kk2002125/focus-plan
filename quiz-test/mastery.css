@@ -96,3 +96,6 @@ body:has(.review-dialog[open]){overflow:hidden}
   .chapter-question-grid{max-height:170px;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:6px}
   .chapter-question{min-height:48px;padding:7px 3px}
 }
+@media(prefers-color-scheme:dark){
+  .nav-btn.active{background:#234435;color:#baf2d5}
+}
