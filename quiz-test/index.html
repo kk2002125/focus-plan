@@ -752,6 +752,7 @@ function renderPractice(scrollToAnalysis=false){
       <b>${practice.correct?'✓ 回答正确':'✗ 回答错误'}</b><br>正确答案：<b>${answerText(q)}</b>
     </div>
     ${practice.feedback?`<div class="reinforce-note">${practice.feedback}</div>`:""}
+    <div class="memory-detail" role="status"><b>下次复习</b><p>${memoryFor(q.id)?.phase==='review'&&memoryFor(q.id).dueTs?new Date(memoryFor(q.id).dueTs).toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric'}):memoryFor(q.id)?.phase==='mastered'?'本轮记忆周期已完成':'本轮继续重学，答对后安排具体日期'}</p></div>
     <div class="analysis">
       <h3>详细原理解析</h3>
       <div class="analysis-block principle"><b>① 核心原理</b>${q.principle}</div>
